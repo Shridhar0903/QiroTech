@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+     <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="about.css">
+
+</head>
+<body>
+<!-- ==============================header============================ -->
+  <header class="topbar">
+    <div class="nav-left">
+    <div class="logo">
+      <img src="img/logo.png" alt="MDX Logo">
+    </div>
+      <div class="divider"></div>
+
+      <!-- Audio trigger button -->
+      <button class="audio-trigger" id="audioTrigger" aria-label="Play sound">—</button>
+    </div>
+
+    <!-- Center nav links -->
+    <nav class="nav-center">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+    </nav>
+
+    <!-- Right side actions -->
+    <div class="nav-right">
+      <a href="contact.html" class="talk-link">Let’s talk <span>↗</span></a>
+      <div class="divider"></div>
+
+      <!-- Menu icon -->
+      <button class="menu-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-panel">
+
+    <!-- close button -->
+    <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+
+    <div class="menu-content">
+      <!-- LEFT -->
+      <div class="menu-left">
+        <div class="menu-kicker">
+          <span class="menu-dot"></span>
+          <span>Connect with us!</span>
+        </div>
+
+        <h2 class="menu-title">
+          Tell us about your project. <br>
+          Let’s collaborate and make great stuff.
+        </h2>
+
+        <div class="menu-line"></div>
+
+        <a href="mailto:hello@mdx.so" class="menu-email">
+          <span class="menu-mail-icon">✉</span>
+          <span>hr@qirotec.com</span>
+        </a>
+
+        <a href="#" class="menu-talk-btn">
+          LET'S TALK <span>↗</span>
+        </a>
+      </div>
+
+      <!-- CENTER -->
+      <div class="menu-col">
+        <div class="menu-col-title">NAVIGATION</div>
+
+        <a href="index.html" class="menu-link active">Home</a>
+        <a href="about.html" class="menu-link">About Us</a>
+        <a href="services.html" class="menu-link">Services</a>
+        <a href="projects" class="menu-link">Projects</a>
+      
+      </div>
+
+      <!-- RIGHT -->
+      <div class="menu-col">
+        <div class="menu-col-title">SERVICES</div>
+
+        <a href="" class="menu-link muted">Website Development & SEO Services</a>
+        <a href="" class="menu-link muted">Mobile & Web App</a>
+        <a href="" class="menu-link muted">UI & UX Design</a>
+        
+        <a href="" class="menu-link muted">Custom Software Development</a>
+        <a href="" class="menu-link muted">Software Maintenance & Supportt</a>
+
+
+        <!-- <div class="menu-col-title menu-col-title-space">SPONSOR</div>
+        <a href="#" class="menu-link muted">Brand Deals</a> -->
+      </div> 
+    </div>
+
+    <div class="menu-bottom">
+      <div class="menu-copy">© 2026 MDX. All rights reserved.</div>
+
+      <div class="menu-socials">
+        <a href="#">♪</a>
+        <a href="#">◎</a>
+        <a href="#">X</a>
+        <a href="#">f</a>
+        <a href="#">▶</a>
+        <a href="#">in</a>
+      </div>
+
+      <div class="menu-policies">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms Of Use</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--================= hero section============== -->
+ <section class="About-hero-section">
+  <div class="About-hero-circle"></div>
+  <div class="About-hero-glow"></div>
+
+  <div class="About-hero-content">
+    <h2 class="About-hero-title">
+      Engineering <span>powerful</span> <br>
+      digital solutions.
+    </h2>
+
+    <p class="About-hero-text">
+      Qiro Tech is a modern software company delivering scalable <span> web, mobile, 
+      AI and cloud solutions</span> that help businesses grow, automate, and innovate.
+    </p>
+
+    <a href="#" class="about-cta-btn">
+          LET’S TALK <span>↗</span>
+        </a>
+  </div>
+</section>
+
+
+<!-- ================= video ================= -->
+<div class="about-showreel-card">
+    <video autoplay loop muted playsinline class="about-bg-video">
+        <source src="img/showreel-mdx.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="about-video-overlay"></div>
+
+    <div class="about-top-info">
+        <div class="about-brand-logo">DRIP</div>
+        <div class="about-charging-info">
+            <span class="about-label">Charging Type</span>
+            <span class="about-value">USB-C</span>
+        </div>
+    </div>
+
+    <div class="about-play-action-center">
+        <svg class="about-play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.5 5.5V18.5L19 12L6.5 5.5Z" stroke="white" stroke-width="1.5" fill="transparent" stroke-linejoin="round" stroke-linecap="round"/>
+        </svg>
+        <span class="about-divider">|</span>
+        <span class="about-action-text">WATCH SHOWREEL</span>
+    </div>
+  </div>
+
+<!-- ==============about section============== -->
+
+  <section class="about-section">
+    <div class="about-aura-container">
+      <div class="about-aura-circle yellow-aura"></div>
+        <div class="about-aura-circle orange-aura"></div>
+        
+    </div>
+
+    <div class="about-content">
+        <a href="about.html" class="about-button">
+         ABOUT US
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+
+        <p class="about-subheading">Qiro Tech is a technology-driven company focused on building smart, scalable and secure digital products.
+        We partner with startups, SMEs and enterprises to transform ideas into impactful digital solutions that drive real business growth. <br><br>
+        Our expertise spans web platforms, mobile applications, enterprise systems and cloud solutions. Every product we build is designed with performance, user experience and long-term scalability in mind. <br><br>   
+        At Qiro Tech, we don’t just develop software — we create digital experiences that help businesses innovate, automate and stay ahead in a fast-changing world.</p>
+    
+    </div>
+</section>
+
+<script>
+    /* =========================================================
+   HERO Next section SCROLL ANIMATION
+========================================================= */
+
+const aboutSection = document.querySelector(".about-section");
+
+function aboutScrollAnimation() {
+
+  if (!aboutSection) return;
+
+  const rect = aboutSection.getBoundingClientRect();
+
+  const progress = Math.min(
+    Math.max((window.innerHeight - rect.top) / window.innerHeight, 0),
+    1
+  );
+
+  /* FIXED VARIABLE NAME */
+  const scaleValue = 0.55 + progress * 0.55;
+
+  /* APPLY SCALE */
+  aboutSection.style.setProperty("--heroScale", scaleValue);
+
+  /* CONTENT REVEAL */
+  if (progress > 0.15) {
+    aboutSection.classList.add("active");
+  } else {
+    aboutSection.classList.remove("active");
+  }
+}
+
+/* RUN */
+window.addEventListener("scroll", aboutScrollAnimation);
+
+/* RUN ON LOAD */
+aboutScrollAnimation();
+
+</script>
+
+
+  <!-- =========================================================
+   OUR VALUES / STORY SECTION
+========================================================= -->
+
+<section class="qs-values-section">
+
+    <!-- TOP -->
+    <div class="qs-values-top">
+
+        <h2 class="qs-values-heading">
+            Our <span>Story</span>
+        </h2>
+
+        <p class="qs-values-text">
+            Qiro Tech started with one belief — technology should create real impact.
+            What began as a small group of passionate developers has evolved into a
+            digital partner for growing businesses.
+            <br><br>
+            <span>Over the years, we’ve helped companies launch platforms,
+            automate operations and scale digitally in competitive markets.</span>
+        </p>
+
+    </div>
+
+    <!-- GLOW -->
+    <div class="qs-values-glow"></div>
+
+    <!-- CARDS -->
+    <div class="qs-values-grid">
+
+        <!-- CARD 1 -->
+        <div class="qs-value-card">
+
+            <div class="qs-card-number">01</div>
+
+            <h3>
+                Empowering Through Action
+            </h3>
+
+            <p>
+                We focus on execution, not just ideas.
+                Our team builds solutions that automate workflows,
+                reduce manual effort and increase business efficiency.
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="qs-value-card">
+
+            <div class="qs-card-number">02</div>
+
+            <h3>
+                Building Scalable Solutions
+            </h3>
+
+            <p>
+                Every product we develop is designed to deliver
+                measurable value, seamless performance and
+                long-term scalability for growing businesses.
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="qs-value-card">
+
+            <div class="qs-card-number">03</div>
+
+            <h3>
+                Who We Are
+            </h3>
+
+            <p>
+                We are designers, engineers and problem-solvers
+                passionate about creating meaningful digital experiences
+                through collaboration, innovation and transparency.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>

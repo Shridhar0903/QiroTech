@@ -186,3 +186,72 @@ function animateFooterLogos() {
     footerLogos.forEach((logo) => logo.classList.remove("show"));
   }
 }
+// =====================================================================================
+/* =========================================================
+   HERO Next section SCROLL ANIMATION
+========================================================= */
+
+const heroSection = document.querySelector(".hero-section");
+
+function heroScrollAnimation() {
+  if (!heroSection) return;
+
+  const rect = heroSection.getBoundingClientRect();
+
+  /* SCROLL PROGRESS */
+
+  const progress = Math.min(
+    Math.max((window.innerHeight - rect.top) / window.innerHeight, 0),
+    1,
+  );
+
+  /* CIRCLE SCALE */
+
+  const scaleValue = 0.55 + progress * 0.55;
+
+  /* APPLY SCALE */
+
+  heroSection.style.setProperty("--heroScale", scaleValue);
+
+  /* CONTENT REVEAL */
+
+  if (progress > 0.35) {
+    heroSection.classList.add("active");
+  } else {
+    heroSection.classList.remove("active");
+  }
+}
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+window.addEventListener("scroll", heroScrollAnimation);
+
+window.addEventListener("load", heroScrollAnimation);
+
+// =====================================================================================
+
+/* =========================
+   IDEAS SECTION ANIMATION
+========================= */
+
+const ideasSection = document.querySelector(".ideas-section");
+
+function animateIdeasSection() {
+  if (!ideasSection) return;
+
+  const rect = ideasSection.getBoundingClientRect();
+
+  const triggerPoint = window.innerHeight * 0.43;
+
+  if (rect.top < triggerPoint) {
+    ideasSection.classList.add("active");
+  } else {
+    ideasSection.classList.remove("active");
+  }
+}
+
+window.addEventListener("scroll", animateIdeasSection);
+
+window.addEventListener("load", animateIdeasSection);

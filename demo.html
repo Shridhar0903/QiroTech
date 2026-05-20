@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* =========================================================
+   VALUES SECTION
+========================================================= */
+
+.qs-values-section{
+    position:relative;
+
+    width:100%;
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:110px 28px;
+
+    overflow:hidden;
+
+    background:#f7f7f5;
+}
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.qs-values-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:50px;
+
+    margin-bottom:70px;
+
+    position:relative;
+
+    z-index:5;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.qs-values-heading{
+    font-size:clamp(48px,6vw,100px);
+
+    line-height:.92;
+
+    letter-spacing:-0.05em;
+
+    font-weight:300;
+
+    color:#0d1520;
+}
+
+.qs-values-heading span{
+    font-weight:600;
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.qs-values-text{
+    max-width:480px;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    color:#7a7f87;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.qs-values-grid{
+    position:relative;
+
+    z-index:5;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:20px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.qs-value-card{
+    position:relative;
+
+    min-height:340px;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.88),
+    rgba(255,255,255,.72));
+
+    border:1.5px solid rgba(20,99,123,.18);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    transition:.45s ease;
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.qs-card-number{
+    width:58px;
+    height:58px;
+
+    margin-bottom:70px;
+
+    font-size:16px;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.qs-value-card h3{
+    font-size:34px;
+
+    line-height:1.02;
+
+    letter-spacing:-0.04em;
+
+    margin-bottom:18px;
+}
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.qs-value-card p{
+    font-size:17px;
+
+    line-height:1.6;
+
+    max-width:100%;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1100px){
+
+    .qs-values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .qs-values-top{
+        flex-direction:column;
+    }
+}
+
+@media(max-width:768px){
+
+    .qs-values-section{
+        padding:80px 20px;
+    }
+
+    .qs-values-heading{
+        font-size:54px;
+    }
+
+    .qs-values-text{
+        font-size:16px;
+    }
+
+    .qs-value-card{
+        min-height:auto;
+        padding:24px;
+    }
+
+    .qs-value-card h3{
+        font-size:30px;
+    }
+}
+</style>
+<body>
+    
+    <!-- =========================================================
+   OUR VALUES / STORY SECTION
+========================================================= -->
+
+<section class="qs-values-section">
+
+    <!-- TOP -->
+    <div class="qs-values-top">
+
+        <h2 class="qs-values-heading">
+            Our <span>Story</span>
+        </h2>
+
+        <p class="qs-values-text">
+            Qiro Tech started with one belief — technology should create real impact.
+            What began as a small group of passionate developers has evolved into a
+            digital partner for growing businesses.
+            <br><br>
+            Over the years, we’ve helped companies launch platforms,
+            automate operations and scale digitally in competitive markets.
+        </p>
+
+    </div>
+
+    <!-- GLOW -->
+    <div class="qs-values-glow"></div>
+
+    <!-- CARDS -->
+    <div class="qs-values-grid">
+
+        <!-- CARD 1 -->
+        <div class="qs-value-card">
+
+            <div class="qs-card-number">01</div>
+
+            <h3>
+                Empowering Through Action
+            </h3>
+
+            <p>
+                We focus on execution, not just ideas.
+                Our team builds solutions that automate workflows,
+                reduce manual effort and increase business efficiency.
+            </p>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="qs-value-card">
+
+            <div class="qs-card-number">02</div>
+
+            <h3>
+                Building Scalable Solutions
+            </h3>
+
+            <p>
+                Every product we develop is designed to deliver
+                measurable value, seamless performance and
+                long-term scalability for growing businesses.
+            </p>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="qs-value-card">
+
+            <div class="qs-card-number">03</div>
+
+            <h3>
+                Who We Are
+            </h3>
+
+            <p>
+                We are designers, engineers and problem-solvers
+                passionate about creating meaningful digital experiences
+                through collaboration, innovation and transparency.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
