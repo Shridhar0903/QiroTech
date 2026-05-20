@@ -11,7 +11,7 @@
    ROOT VARIABLES
 ========================= */
 :root{
-  --bg:#efefed;
+  --bg:#ffffff;
   --bg-2:#ecebe8;
   --text:#101722;
   --muted:#8f918f;
@@ -515,15 +515,12 @@ a{
 
 
 
-/* =========================
-   HERO
-========================= */
 .hero{
   position:relative;
   min-height:calc(100vh - var(--header-h));
   background:
-    radial-gradient(circle at 50% 16%, rgba(204, 233, 232, 0.78), transparent 22%),
-    linear-gradient(to bottom, #effefe 0%, #eef1f1 45%, #eceae7 100%);
+    radial-gradient(circle at 50% 16%, rgba(204, 233, 231, 0.78), transparent 22%),
+    linear-gradient(to bottom, #ebf6f6 0%, #f0fefd 45%, #e9f9fa 100%);
   overflow:hidden;
 }
 
@@ -551,12 +548,12 @@ a{
 /* Left hero text */
 .hero-left{
   align-self:end;
-  padding-bottom:44px;
+  padding-bottom:100px;
   max-width:570px;
 }
 
 .hero-left h1{
-  font-size:clamp(48px, 4.2vw, 76px);
+  font-size:clamp(40px, 2.8vw, 60px);
   line-height:.98;
   font-weight:400;
   letter-spacing:-1.8px;
@@ -566,7 +563,7 @@ a{
 
 .hero-left p{
   max-width:560px;
-  font-size:clamp(18px, 1.45vw, 23px);
+  font-size:clamp(15px, 1.25vw, 20px);
   line-height:1.14;
   color:#999a98;
   font-weight:300;
@@ -574,23 +571,26 @@ a{
 }
 
 /* CTA button */
+
 .cta-btn{
   display:inline-flex;
   align-items:center;
-  gap:14px;
-  background:linear-gradient(180deg,#14637b,#0e4555);
+  gap:10px;
+
+  background:linear-gradient(180deg,#4d99a4,#0d4e53);
   color:#fff;
-  padding:18px 34px;
+  padding:16px 30px;   /* reduced */
   border-radius:999px;
-  font-size:18px;
-  letter-spacing:2px;
-  box-shadow:0 18px 40px rgba(9,19,33,.18);
+  font-size:13px;      /* reduced */
+  letter-spacing:1.5px;
+  box-shadow:0 14px 30px rgba(9,19,33,.15);
   transition:.35s ease;
 }
 
+
 .cta-btn span{
-  color:var(--bg);
-  font-size:24px;
+  color:var(--accent);
+  font-size:18px;
   line-height:1;
 }
 
@@ -612,10 +612,10 @@ a{
 
 .orb-stage{
   position:relative;
-  width:min(40vw, 650px);
+  width:min(38vw,600px);
   height:min(40vw, 650px);
-  min-width:320px;
-  min-height:320px;
+  min-width:310px;
+  min-height:310px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -628,8 +628,8 @@ a{
   border-radius:50%;
   background:
     radial-gradient(circle at 50% 50%,
-      rgba(191, 255, 249, 0.6) 0%,
-      rgba(191, 249, 255, 0.22) 22%,
+      rgba(157, 229, 237, 0.6) 0%,
+      rgba(144, 192, 200, 0.404) 22%,
       rgba(255, 226, 191, 0.00) 62%);
   filter:blur(30px);
   animation:auraPulse 5s ease-in-out infinite;
@@ -644,8 +644,8 @@ a{
   overflow:hidden;
   background:
     radial-gradient(circle at 50% 48%,
-      rgba(110, 200, 202, 0.577) 0%,
-      rgba(165, 242, 245, 0.82) 23%,
+      rgba(204, 252, 255, 0.95) 0%,
+      rgba(219, 249, 249, 0.82) 23%,
       rgba(233, 244, 244, 0.58) 58%,
       rgba(255, 255, 255, 0.96) 100%);
   box-shadow:
@@ -662,8 +662,8 @@ a{
   border-radius:50%;
   background:
     radial-gradient(circle at 50% 50%,
-      rgba(255,214,170,.55) 0%,
-      rgba(255,214,170,.20) 24%,
+      rgba(151, 219, 219, 0.55) 0%,
+      rgba(170, 252, 255, 0.2) 24%,
       rgba(255,214,170,0) 48%);
   filter:blur(4px);
 }
@@ -706,7 +706,7 @@ a{
   border-radius:50%;
   background:
     radial-gradient(circle,
-      rgba(0,0,0,.18) 0%,
+      rgba(69, 90, 92, 0.708) 0%,
       rgba(0,0,0,.10) 34%,
       rgba(0,0,0,0) 72%);
   filter:blur(16px);
@@ -720,12 +720,12 @@ a{
 .hero-right{
   align-self:end;
   padding-bottom:54px;
-  max-width:440px;
+  max-width:400px;
   margin-left:auto;
 }
 
 .hero-right p{
-  font-size:clamp(20px, 1.55vw, 34px);
+  font-size:clamp(15px, 1.25vw, 24px);
   line-height:1.06;
   font-weight:300;
   color:#7f807e;
@@ -748,20 +748,21 @@ a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:42px;
-  padding:0 20px;
+  min-height:38px;
+  padding:0 15px;
   border-radius:999px;
-  border:2px solid #2b323d;
+  border:1px solid #2b323d;
   color:#2b323d;
-  font-size:14px;
+  font-size:12px;
   letter-spacing:.4px;
   transition:.3s ease;
   background:transparent;
+  margin-bottom: 20px;
 }
 
 .pill:hover{
-  background:#1c232c;
-  color:#fff;
+  background:#081321;
+  color:#ffffff;
   transform:translateY(-2px);
 }
 
@@ -770,9 +771,7 @@ a{
   padding:0;
   font-size:18px;
 }
-/* =============================
-Hero-next 
-============================= */
+
 
 .brain-img{
   width: 100%;
@@ -799,59 +798,91 @@ Hero-next
     transform: translateY(-20px) scale(1.02);
   }
 }
+/* =============================
+Hero-next 
+============================= */
+.hero-section{
+    position:relative;
+    width:100%;
+    min-height:120vh;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 50% 16%, rgba(204, 233, 231, 0.78), transparent 22%),
+    linear-gradient(to bottom, #ebf6f6 0%, #f0fefd 45%, #e9f9fa 100%);
 
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     background: #ebf8f7;
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding:200px 20px;
 }
 
-.aura-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    pointer-events: none;
+.hero-section::before{
+    content:"";
+    position:absolute;
+    width:1400px;
+    height:1400px;
+    border-radius:50%;
+    background:#ffffff;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:0;
 }
 
-.aura-circle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0;
-    animation: fadeInAura 2s ease-in-out forwards;
+.aura-container{
+    position:absolute;
+    width:1400px;
+    height:1400px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius:50%;
+    overflow:hidden; /* IMPORTANT */
+    z-index:1;
+    pointer-events:none;
 }
 
-.orange-aura {
-    width: 55vw;
-    height: 55vw;
-    max-width: 600px;
-    max-height: 600px;
-    background: #32a0c1;
-    transform: translateX(-15%);
-    animation-delay: 0.2s;
+/* COMMON AURA */
+
+.aura-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.95;
+    animation:fadeInAura 2s ease forwards;
 }
 
-.yellow-aura {
-    width: 45vw;
-    height: 45vw;
-    max-width: 500px;
-    max-height: 500px;
-    background: #0f85a988;
-    transform: translateX(15%);
-    animation-delay: 0.6s;
+/* LEFT ORANGE / BLUE GLOW */
+/* LEFT AURA */
+.orange-aura{
+    width:700px;
+    height:700px;
+
+    background:
+      radial-gradient(circle,
+      rgba(61, 165, 179, 0.95) 0%,
+      rgba(54, 155, 152, 0.62) 32%,
+      rgba(50,160,193,0) 78%);
+
+    top:12%;
+    left:-10%;
+}
+
+/* RIGHT AURA */
+.yellow-aura{
+    width:500px;
+    height:500px;
+
+    background:
+       radial-gradient(circle,
+      rgba(61, 165, 179, 0.95) 0%,
+      rgba(54, 155, 152, 0.62) 32%,
+      rgba(50,160,193,0) 78%);
+
+
+    right:-10%;
+    bottom:14%;
 }
 
 @keyframes fadeInAura {
@@ -866,13 +897,16 @@ Hero-next
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 1000px;
+    max-width: 5000px;
     padding: 0 20px;
+  
 }
 
 .hero-heading {
-    font-size: clamp(4rem, 6vw, 5rem);
-    font-weight: 400;
+ 
+    font-family: 'Outfit', sans-serif;
+     font-size: clamp(54px, 6.8vw, 142px);
+    font-weight: 300;
     color: #111;
     line-height: 1.09;
     letter-spacing: -0.02em;
@@ -883,11 +917,11 @@ Hero-next
 }
 
 .hero-subheading {
-    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    font-size: clamp(1rem, 1.26vw, 1.20rem);
     color: #555;
     line-height: 1.5;
     margin: 0 auto 40px auto;
-    max-width: 600px;
+    max-width: 800px;
     font-weight: 400;
     opacity: 0;
     transform: translateY(20px);
@@ -899,12 +933,12 @@ Hero-next
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #111;
-    color: #fff;
-    padding: 12px 28px;
+    background:linear-gradient(180deg,#4d99a4,#0d4e53);
+    color:#fff;
+    padding: 20px 40px;
     border-radius: 40px;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -913,6 +947,8 @@ Hero-next
     transform: translateY(20px);
     animation: fadeUpText 1s cubic-bezier(0.25, 1, 0.5, 1) 0.9s forwards;
 }
+
+
 
 .hero-button:hover {
     background-color: #333;
@@ -926,11 +962,11 @@ Hero-next
 
 /* ============================
  ideas section 
-============================    */
+
 .ideas-section{
   position: relative;
   min-height: 100vh;
-  background: #ebf8f7;
+  background: #ffffff;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -947,7 +983,7 @@ Hero-next
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid rgba(222, 242, 245, 0.95);
-  background: radial-gradient(circle at center, rgba(245, 241, 235, 0.5) 0%, rgba(239,239,237,0.08) 72%);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.5) 0%, rgba(239,239,237,0.08) 72%);
   z-index: 1;
 }
 
@@ -963,9 +999,9 @@ Hero-next
     radial-gradient(circle,
       rgba(98, 200, 200, 0.7) 0%,
       rgba(84, 255, 249, 0.38) 28%,
-      rgba(255,188,116,0.16) 52%,
-      rgba(255,205,146,0.06) 68%,
-      transparent 78%);
+    
+     
+      transparent 7%);
   filter: blur(90px);
   z-index: 2;
 }
@@ -1059,6 +1095,154 @@ Hero-next
     line-height: 1.15;
   }
 }
+
+
+============================    */
+/* ==========================================================================
+   1. RESET & SECTION BASE
+   ========================================================================== */
+.ideas-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff; /* पूर्णपणे स्वच्छ पांढरा बॅकग्राउंड */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. BACKGROUND EFFECT (GLOW & GLASS ARC)
+   ========================================================================== */
+
+
+.ideas-bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    
+    background: radial-gradient(
+        circle, 
+        rgba(73, 170, 167, 0.58) 0%, 
+        rgba(95, 230, 227, 0.629) 35%, 
+        rgba(255, 255, 255, 0) 70%
+    );
+    filter: blur(60px); 
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ideas-bg-circle{
+    position: absolute;
+
+    width: 1050px;
+    height: 1050px;
+
+    top: 18%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    /* ===== GLASS BACKGROUND ===== */
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.45) 0%,
+        rgba(255,255,255,0.18) 35%,
+        rgba(255,255,255,0.04) 60%,
+        rgba(255,255,255,0) 100%
+      );
+
+    /* ===== ONLY TOP PART VISIBLE ===== */
+    border-top: 2px solid rgba(255,255,255,0.95);
+
+    /* soft edge */
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.8),
+      inset 0 40px 80px rgba(255,255,255,0.18),
+      0 0 80px rgba(255,255,255,0.08);
+
+    /* ===== GLASSMORPHISM ===== */
+    backdrop-filter: blur(45px) saturate(160%);
+    -webkit-backdrop-filter: blur(45px) saturate(160%);
+
+    /* smooth fade at bottom */
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.9) 35%,
+      rgba(0,0,0,0.45) 60%,
+      rgba(0,0,0,0) 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.9) 35%,
+      rgba(0,0,0,0.45) 60%,
+      rgba(0,0,0,0) 100%
+    );
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   3. CONTENT & TYPOGRAPHY
+   ========================================================================== */
+.ideas-content {
+    position: relative;
+    z-index: 3; /* ग्लो आणि कर्वच्या वर मजकूर दिसण्यासाठी */
+    width: 100%;
+    max-width: 1400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* मुख्य हेडिंग स्टाइल */
+.ideas-title {
+    font-size: clamp(44px, 7.5vw, 110px);
+    font-weight: 300;
+    line-height: 0.96;
+    letter-spacing: -0.04em; /* अक्षरांमधील अंतर कमी केले */
+    color: #0b0f19;
+    margin: 0 0 32px 0;
+}
+
+/* "Digital" शब्दाचा बोल्ड लुक */
+.ideas-title span {
+    font-weight: 500;
+    color: #0b0f19;
+}
+
+/* सब-टेक्स्ट (Subheading) */
+.ideas-text {
+    max-width: 720px;
+    font-size: clamp(14px, 1.25vw, 17px);
+    line-height: 1.45;
+    color: #1a1e26;
+    font-weight: 400;
+}
+
+/* स्क्रीनशॉटप्रमाणे खालच्या ओळीचा रंग हलका फिकट करण्यासाठी */
+.ideas-text span {
+    color: rgba(26, 30, 38, 0.45);
+}
+
+
 
 .showreel-card {
     position: relative;
