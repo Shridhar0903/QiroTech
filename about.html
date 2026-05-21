@@ -129,22 +129,22 @@
 </div>
 
 <!--================= hero section============== -->
- <section class="About-hero-section">
+ <section class="About-hero-section ">
   <div class="About-hero-circle"></div>
   <div class="About-hero-glow"></div>
 
-  <div class="About-hero-content">
-    <h2 class="About-hero-title">
+  <div class="About-hero-content reveal-up">
+    <h2 class="About-hero-title reveal-up">
       Engineering <span>powerful</span> <br>
       digital solutions.
     </h2>
 
-    <p class="About-hero-text">
+    <p class="About-hero-text reveal-up">
       Qiro Tech is a modern software company delivering scalable <span> web, mobile, 
       AI and cloud solutions</span> that help businesses grow, automate, and innovate.
     </p>
 
-    <a href="#" class="about-cta-btn">
+    <a href="#" class="about-cta-btn reveal-up">
           LET’S TALK <span>↗</span>
         </a>
   </div>
@@ -152,7 +152,7 @@
 
 
 <!-- ================= video ================= -->
-<div class="about-showreel-card">
+<div class="about-showreel-card reveal-up">
     <video autoplay loop muted playsinline class="about-bg-video">
         <source src="img/showreel-mdx.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -178,28 +178,30 @@
   </div>
 
 <!-- ==============about section============== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <section class="about-section">
+<section class="about-section">
     <div class="about-aura-container">
-      <div class="about-aura-circle yellow-aura"></div>
+        <div class="about-aura-circle yellow-aura"></div>
         <div class="about-aura-circle orange-aura"></div>
-        
     </div>
 
     <div class="about-content">
         <a href="about.html" class="about-button">
-         ABOUT US
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
+            ABOUT US
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
         </a>
 
-        <p class="about-subheading">Qiro Tech is a technology-driven company focused on building smart, scalable and secure digital products.
-        We partner with startups, SMEs and enterprises to transform ideas into impactful digital solutions that drive real business growth. <br><br>
-        Our expertise spans web platforms, mobile applications, enterprise systems and cloud solutions. Every product we build is designed with performance, user experience and long-term scalability in mind. <br><br>   
-        At Qiro Tech, we don’t just develop software — we create digital experiences that help businesses innovate, automate and stay ahead in a fast-changing world.</p>
-    
+        <p class="about-subheading gsap-reveal-text">
+            Qiro Tech is a technology-driven company focused on building smart, scalable and secure digital products.
+            We partner with startups, SMEs and enterprises to transform ideas into impactful digital solutions that drive real business growth. <br><br>
+            Our expertise spans web platforms, mobile applications, enterprise systems and cloud solutions. Every product we build is designed with performance, user experience and long-term scalability in mind. <br><br>   
+            At Qiro Tech, we don’t just develop software — we create digital experiences that help businesses innovate, automate and stay ahead in a fast-changing world.
+        </p>
     </div>
 </section>
 
@@ -241,6 +243,45 @@ window.addEventListener("scroll", aboutScrollAnimation);
 /* RUN ON LOAD */
 aboutScrollAnimation();
 
+// =================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const textElement = document.querySelector(".gsap-reveal-text");
+
+    const originalHTML = textElement.innerHTML;
+    let processedHTML = originalHTML.replace(/<br\s*\/?>/gi, " ||BR|| ");
+
+    const words = processedHTML.trim().split(/\s+/);
+
+    textElement.innerHTML = "";
+
+    words.forEach((word) => {
+        if (word === "||BR||") {
+            const br = document.createElement("br");
+            textElement.appendChild(br);
+        } else if (word !== "") {
+            const span = document.createElement("span");
+            span.classList.add("gsap-word");
+            span.textContent = word + " ";
+            textElement.appendChild(span);
+        }
+    });
+
+    gsap.to(".gsap-reveal-text .gsap-word", {
+        scrollTrigger: {
+            trigger: ".about-section",
+            start: "top 60%",
+            end: "bottom 80%",
+            scrub: true,
+            markers: false
+        },
+        color: "#101722",
+        stagger: 0.1,
+        ease: "none"
+    });
+});
+
 </script>
 
 
@@ -251,13 +292,13 @@ aboutScrollAnimation();
 <section class="qs-values-section">
 
     <!-- TOP -->
-    <div class="qs-values-top">
+    <div class="qs-values-top reveal-up">
 
-        <h2 class="qs-values-heading">
+        <h2 class="qs-values-heading reveal-up">
             Our <span>Story</span>
         </h2>
 
-        <p class="qs-values-text">
+        <p class="qs-values-text reveal-up">
             Qiro Tech started with one belief — technology should create real impact.
             What began as a small group of passionate developers has evolved into a
             digital partner for growing businesses.
@@ -269,13 +310,13 @@ aboutScrollAnimation();
     </div>
 
     <!-- GLOW -->
-    <div class="qs-values-glow"></div>
+    <div class="qs-values-glow reveal-up"></div>
 
     <!-- CARDS -->
     <div class="qs-values-grid">
 
         <!-- CARD 1 -->
-        <div class="qs-value-card">
+        <div class="qs-value-card reveal-up">
 
             <div class="qs-card-number">01</div>
 
@@ -292,7 +333,7 @@ aboutScrollAnimation();
         </div>
 
         <!-- CARD 2 -->
-        <div class="qs-value-card">
+        <div class="qs-value-card reveal-up">
 
             <div class="qs-card-number">02</div>
 
@@ -309,7 +350,7 @@ aboutScrollAnimation();
         </div>
 
         <!-- CARD 3 -->
-        <div class="qs-value-card">
+        <div class="qs-value-card reveal-up">
 
             <div class="qs-card-number">03</div>
 
@@ -328,6 +369,82 @@ aboutScrollAnimation();
     </div>
 
 </section>
+
+<!-- ================================================================== -->
+<div class="ui-container">
+    <div class="left-section">
+        <div class="about-aura-circle reveal-up "></div>
+        
+        <span class="tag-button reveal-up">Our Philosophy</span>
+        
+        <h1 class="title reveal-up">We don’t just build <strong>software</strong><br>  We build <strong>growth</strong><br> </h1>
+
+    </div>
+
+    <div class="right-section reveal-up">
+<p><span>Qiro Tech — Smart Software for Modern Businesses </span><br><strong>Every line of code is an investment in your future.</strong> We look beyond the screen to align our engineering with your business metrics, designing digital products that actively drive revenue and scale operations.</p>    </div>
+</div>
+
+<!-- ================================================================== -->
+
+<section class="footer-mdx">
+  <div class="footer-mdx-top">
+    <div class="footer-mdx-left">
+      <h2 class="footer-mdx-heading">
+        Is there a fascinating<br>
+        project <span>brewing in</span><br>
+        <span>your mind?</span>
+      </h2>
+
+      <a href="mailto:hr@qirotec.com" class="footer-mdx-email">
+        <span class="footer-mdx-email-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21.6 4.2a2.2 2.2 0 0 0-2.3-.3L3.8 11.1a2 2 0 0 0 .1 3.7l4.3 1.7 1.7 4.3a2 2 0 0 0 1.8 1.2h.1a2 2 0 0 0 1.8-1.1l7.3-15.6a2.2 2.2 0 0 0-.3-2.1ZM10.2 15.8l-.9-2.4 7.5-6.4-6.4 7.6Z"/>
+          </svg>
+        </span>
+        <span>hr@qirotec.com</span>
+      </a>
+    </div>
+
+    <nav class="footer-mdx-nav">
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact Us</a>
+ 
+    </nav>
+  </div>
+
+  <div class="footer-mdx-divider"></div>
+
+  <div class="footer-mdx-logo-row">
+    <div class="footer-mdx-logo footer-mdx-logo-Q">Q</div>
+    <div class="footer-mdx-logo footer-mdx-logo-I">I</div>
+    <div class="footer-mdx-logo footer-mdx-logo-R">R</div>
+       <div class="footer-mdx-logo footer-mdx-logo-O">O</div>
+  </div>
+
+  <div class="footer-mdx-bottom">
+    <div class="footer-mdx-socials">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="YouTube">▶</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="X">X</a>
+      <a href="#" aria-label="TikTok">♪</a>
+    </div>
+
+    <div class="footer-mdx-meta">
+      <span>© QIRO TECH INNOVATION PVT. LTD. All rights reserved</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+
+    <a href="#" class="footer-mdx-scrolltop">
+      <span>SCROLL TOP</span>
+      <span class="footer-mdx-scrolltop-icon">⌃</span>
+    </a>
+  </div>
+</section>
+
 
 
 <script src="script.js"></script>

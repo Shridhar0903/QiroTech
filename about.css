@@ -320,6 +320,19 @@ vedio section
 /* ===================================================================
 about us section
 =================================================================== */
+
+.gsap-reveal-text .gsap-word {
+    display: inline-block;
+    color: rgba(16, 23, 34, 0.25); 
+    transition: color 0.1s ease;
+}
+
+
+.gsap-reveal-text br {
+    display: block;
+    content: "";
+    margin-top: 0px;
+}
  .about-section{
     position:relative;
     width:100%;
@@ -425,9 +438,6 @@ about us section
     left:-10%;
 }
 
-/* =========================================================
-   RIGHT AURA
-========================================================= */
 
 /* =========================================================
    LEFT AURA
@@ -466,8 +476,11 @@ about us section
       rgba(255,255,255,0) 0%,
     rgba(61, 165, 179, 0) 24%,
     rgba(54,155,152,0.32) 46%,
-    rgba(61,165,179,0.65) 70%,
-    rgba(50,160,193,0) 100%);
+    rgb(45, 122, 133) 70%,
+    rgba(50,160,193,0) 100%),
+     rgba(255,255,255,0) 0%,
+     rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0) 0%;
 
     right:-10%;
     bottom:14%;
@@ -755,6 +768,12 @@ about us section
     height:58px;
     margin-bottom:70px;
     font-size:16px;
+    background: #14637b;
+    color: #ecebe8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* =========================================================
@@ -816,5 +835,138 @@ about us section
 
     .qs-value-card h3{
         font-size:30px;
+    }
+}
+
+
+/* ================================================================ 
+   UI CONTAINER (CUSTOM LEFT GLOW EFFECT)
+================================================================ */
+
+.ui-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 60px;
+    overflow: hidden; 
+}
+
+.left-section {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 65%; /* Increased width to accommodate larger text */
+    margin-top: 40px;
+   
+}
+
+.left-section::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 500px;
+    border-radius: 50%;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at top,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(255,255,255,0.15) 20%,
+        rgba(255,255,255,0.55) 45%,
+        rgba(255,255,255,0.92) 70%,
+        rgba(72, 136, 141, 0.98) 100%);
+    z-index: -2;
+    pointer-events: none;
+}
+
+.tag-button {
+    font-size: 13px; /* Increased from 11px */
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 8px 18px; /* Increased padding */
+    border-radius: 20px;
+    margin-bottom: 40px; /* Increased spacing */
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.left-section .title {
+    font-size: 66px; /* Increased from 64px for larger impact */
+    font-weight: 300;
+    line-height: 1.12;
+    color: #1a1a1a;
+    letter-spacing: -2px;
+     
+}
+
+
+.left-section title strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.right-section {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 40%;
+    padding-bottom: 40px;
+}
+
+.right-section p {
+    font-size: 20px; 
+    color: #888;
+    line-height: 1.5;
+    max-width: 600px;
+    letter-spacing: -0.1px;
+}
+
+.right-section p strong {
+    color: #333;
+    font-weight: 500;
+}
+.right-section p span {
+    color:#14637b;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .ui-container {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 30px;
+        height: auto;
+    }
+    .left-section {
+        width: 100%;
+        margin-top: 0;
+    }
+    .left-section h1 {
+        font-size: 46px; /* Adjusted mobile view accordingly */
+    }
+    .right-section {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 60px;
+        padding-bottom: 0;
+    }
+    .left-section::before {
+        width: 400px;
+        height: 400px;
+        left: 50%;
+    }
+    .about-aura-circle.ui-blue-aura {
+        width: 250px;
+        height: 250px;
+        left: 50%;
     }
 }
