@@ -29,7 +29,7 @@
 
     <!-- Center nav links -->
     <nav class="nav-center">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="services.html">Services</a>
     </nav>
@@ -190,10 +190,6 @@
     <div class="about-content">
         <a href="about.html" class="about-button">
             ABOUT US
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
         </a>
 
         <p class="about-subheading gsap-reveal-text">
@@ -384,6 +380,110 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="right-section reveal-up">
 <p><span>Qiro Tech — Smart Software for Modern Businesses </span><br><strong>Every line of code is an investment in your future.</strong> We look beyond the screen to align our engineering with your business metrics, designing digital products that actively drive revenue and scale operations.</p>    </div>
 </div>
+
+<!-- ===== Contact section ===== -->
+
+<section class="contact-mdx-section ">
+  <div class="contact-mdx-left reveal-up">
+    <div>
+      <div class="contact-mdx-kicker reveal-up">
+        <span class="dot"></span>
+        <span>Connect with us!</span>
+      </div>
+
+      <h2 class="contact-mdx-title reveal-up">
+        Build Digital Experiences<br>
+        That Inspire, Engage<br>
+        and Grow
+      </h2>
+
+      <div class="contact-mdx-line reveal-up"></div>
+
+      <a href="mailto:hello@mdx.so" class="contact-mdx-mail reveal-up">
+        <span class="mail-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+            <path d="M4 7l8 6 8-6"></path>
+          </svg>
+        </span>
+      hr@qirotec.com
+      </a>
+    </div>
+
+    <div class="contact-mdx-socials reveal-up">
+      <a href="#" aria-label="TikTok">♪</a>
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="X">X</a>
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="YouTube">▶</a>
+      <a href="#" aria-label="LinkedIn">in</a>
+    </div>
+  </div>
+
+  <div class="contact-mdx-right reveal-up">
+    <h3 class="contact-mdx-form-title">Let’s talk</h3>
+
+    <form class="contact-mdx-form" id="contactMdxForm">
+      <div class="contact-mdx-grid">
+        <div class="field">
+          <input type="text" id="fullName" name="fullName" placeholder=" " required>
+          <label for="fullName">Full name</label>
+        </div>
+
+        <div class="field">
+          <input type="text" id="company" name="company" placeholder=" ">
+          <label for="company">Company</label>
+        </div>
+
+        <div class="field">
+          <input type="email" id="email" name="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+
+        <div class="field">
+          <input type="tel" id="phone" name="phone" placeholder=" ">
+          <label for="phone">Phone</label>
+        </div>
+      </div>
+
+      <div class="interest-wrap">
+        <div class="interest-label">I'm Interested on</div>
+
+        <div class="interest-options reveal-up">
+          <label class="interest-chip ">
+            <input type="radio" name="interest" value="UI/UX" checked>
+            <span>UI/UX</span>
+          </label>
+
+          <label class="interest-chip">
+            <input type="radio" name="interest" value="Development">
+            <span>Web Development</span>
+          </label>
+
+          <label class="interest-chip">
+            <input type="radio" name="interest" value="Branding">
+            <span>Seo Services</span>
+          </label>
+
+          <label class="interest-chip">
+            <input type="radio" name="interest" value="3D Animation">
+            <span>Mobile Application</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field field-textarea reveal-up">
+        <textarea id="projectDetails" name="projectDetails" placeholder=" " rows="4"></textarea>
+        <label for="projectDetails">Tell us more about your project!</label>
+      </div>
+
+      <button type="submit" class="contact-mdx-submit reveal-up">
+        <span>SEND</span>
+        <span class="arrow">→</span>
+      </button>
+    </form>
+  </div>
+</section>
 
 <!-- ================================================================== -->
 

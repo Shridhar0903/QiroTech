@@ -576,23 +576,15 @@ about us section
 ========================================================= */
 
 .about-button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    background:rgba(255,255,255,0.08);
-    border:3px solid #4d99a4;
-    color:#4d99a4;
-    padding:10px 40px;
-    border-radius:40px;
-    text-decoration:none;
-    font-size:1rem;
-    font-weight:500;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    transition:.35s ease;
+font-size: 18px; /* Increased from 11px */
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 8px 18px; /* Increased padding */
+    border-radius: 20px;
+    margin-bottom: 40px; /* Increased spacing */
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .about-button:hover{

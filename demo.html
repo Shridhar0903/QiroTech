@@ -3,291 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MDX Premium Process Scroll - Exact Match</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --line-color: rgba(255, 255, 255, 0.05);
+            --glow-color: #ff6b00;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* 1. FIXED EXACT UI GRADIENT EFFECT (एकदम डार्क आणि हाय-कॉन्ट्रास्ट ऑरेंज ग्लो) */
+        .glow-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            /* इथं आपण ओव्हरलॅपिंग रॅडियल ग्रेडियंट्स वापरून डार्क आणि प्रिमियम लुक दिला आहे */
+            background-image: 
+                radial-gradient(circle at 12% 50%, rgba(255, 107, 0, 0.25) 0%, rgba(255, 51, 0, 0.04) 35%, transparent 60%),
+                radial-gradient(circle at 85% 80%, rgba(255, 107, 0, 0.08) 0%, transparent 45%),
+                linear-gradient(135deg, #000000 0%, #030508 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* स्क्रोलिंग एरिया */
+        .scroll-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-top: 25vh;
+            padding-bottom: 80vh;
+        }
+
+        /* 2. BOLD LEFT-ALIGNED TITLE */
+        .title-container {
+            width: 1300px;
+            margin: 0 auto 12vh auto;
+            padding-left: 50px;
+            box-sizing: border-box;
+        }
+
+        .main-title {
+            font-size: 5rem;
+            font-weight: 700; /* Bold */
+            letter-spacing: -2px;
+            margin: 0;
+            line-height: 1.1;
+            opacity: 1;
+            transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+        }
+
+        /* कंटेनर लेआउट */
+        .process-container {
+            position: relative;
+            width: 1300px; 
+            height: 1000px;  
+            margin: 0 auto;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* एकदम बारीक वळणदार मार्ग */
+        .base-path {
+            fill: none;
+            stroke: var(--line-color);
+            stroke-width: 1px; 
+        }
+
+        /* बारीक चमकणारी ऑरेंज रेषा */
+        .glowing-path {
+            fill: none;
+            stroke: var(--glow-color);
+            stroke-width: 1.5px;
+            filter: drop-shadow(0 0 6px var(--glow-color));
+            stroke-dasharray: 3200;
+            stroke-dashoffset: 3200;
+            transition: stroke-dashoffset 0.1s ease-out;
+        }
+
+        /* ३. SHORT VERTICAL INDICATOR LINES (फक्त पॉईंटपुरतीच मर्यादित उभी रेषा) */
+        .v-line {
+            stroke: rgba(255, 255, 255, 0.15); /* पांढरी आणि बारीक */
+            stroke-width: 0.8px;
+        }
+
+        /* छोटा ऑरेंज पॉईंट */
+        .dot {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #fff, 0 0 16px var(--glow-color), 0 0 24px var(--glow-color);
+            z-index: 3;
+            offset-path: path('M 510 50 C 150 130, 80 230, 265 290 C 450 350, 750 330, 810 440 C 870 550, 310 650, 265 730 C 220 810, 600 890, 810 900');
+            offset-distance: 0%;
+            transform: translate(-50%, -50%);
+            transition: offset-distance 0.1s ease-out;
+        }
+
+        .steps {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        /* स्क्रीनशॉट सारखा टेक्स्ट लुक */
+        .step {
+            position: absolute;
+            width: 400px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            pointer-events: none;
+        }
+
+        /* स्टेप्सचे अचूक लोकेशन्स */
+        .step-1 { top: 50px; left: 510px; transform: translateX(25px); }  
+        .step-2 { top: 290px; left: 265px; transform: translateX(25px); } 
+        .step-3 { top: 440px; left: 810px; transform: translateX(25px); }  
+        .step-4 { top: 730px; left: 265px; transform: translateX(25px); }
+        .step-5 { top: 900px; left: 810px; transform: translateX(25px); }
+
+        .step.visible {
+            opacity: 1;
+            transform: translateY(-10px) translateX(25px);
+        }
+
+        .step-meta {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .step-meta::before {
+            content: '⤖';
+            color: var(--glow-color);
+            font-size: 1rem;
+        }
+
+        .step h3 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.15;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+    </style>
 </head>
-
-<style>
-    /* =========================================================
-   VALUES SECTION
-========================================================= */
-
-.qs-values-section{
-    position:relative;
-
-    width:100%;
-    max-width:1400px;
-
-    margin:0 auto;
-
-    padding:110px 28px;
-
-    overflow:hidden;
-
-    background:#f7f7f5;
-}
-
-/* =========================================================
-   TOP AREA
-========================================================= */
-
-.qs-values-top{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-start;
-
-    gap:50px;
-
-    margin-bottom:70px;
-
-    position:relative;
-
-    z-index:5;
-}
-
-/* =========================================================
-   HEADING
-========================================================= */
-
-.qs-values-heading{
-    font-size:clamp(48px,6vw,100px);
-
-    line-height:.92;
-
-    letter-spacing:-0.05em;
-
-    font-weight:300;
-
-    color:#0d1520;
-}
-
-.qs-values-heading span{
-    font-weight:600;
-}
-
-/* =========================================================
-   TEXT
-========================================================= */
-
-.qs-values-text{
-    max-width:480px;
-
-    font-size:18px;
-
-    line-height:1.5;
-
-    color:#7a7f87;
-}
-
-/* =========================================================
-   GRID
-========================================================= */
-
-.qs-values-grid{
-    position:relative;
-
-    z-index:5;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(0,1fr));
-
-    gap:20px;
-}
-
-/* =========================================================
-   CARD
-========================================================= */
-
-.qs-value-card{
-    position:relative;
-
-    min-height:340px;
-
-    padding:28px;
-
-    border-radius:28px;
-
-    overflow:hidden;
-
-    background:
-    linear-gradient(
-    180deg,
-    rgba(255,255,255,.88),
-    rgba(255,255,255,.72));
-
-    border:1.5px solid rgba(20,99,123,.18);
-
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-
-    transition:.45s ease;
-}
-
-/* =========================================================
-   NUMBER
-========================================================= */
-
-.qs-card-number{
-    width:58px;
-    height:58px;
-
-    margin-bottom:70px;
-
-    font-size:16px;
-}
-
-/* =========================================================
-   CARD TITLE
-========================================================= */
-
-.qs-value-card h3{
-    font-size:34px;
-
-    line-height:1.02;
-
-    letter-spacing:-0.04em;
-
-    margin-bottom:18px;
-}
-
-/* =========================================================
-   CARD TEXT
-========================================================= */
-
-.qs-value-card p{
-    font-size:17px;
-
-    line-height:1.6;
-
-    max-width:100%;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1100px){
-
-    .qs-values-grid{
-        grid-template-columns:1fr;
-    }
-
-    .qs-values-top{
-        flex-direction:column;
-    }
-}
-
-@media(max-width:768px){
-
-    .qs-values-section{
-        padding:80px 20px;
-    }
-
-    .qs-values-heading{
-        font-size:54px;
-    }
-
-    .qs-values-text{
-        font-size:16px;
-    }
-
-    .qs-value-card{
-        min-height:auto;
-        padding:24px;
-    }
-
-    .qs-value-card h3{
-        font-size:30px;
-    }
-}
-</style>
 <body>
-    
-    <!-- =========================================================
-   OUR VALUES / STORY SECTION
-========================================================= -->
 
-<section class="qs-values-section">
+    <div class="glow-background"></div>
 
-    <!-- TOP -->
-    <div class="qs-values-top">
+    <div class="scroll-wrapper">
+        <div class="title-container">
+            <h1 class="main-title" id="mainTitle">Our process is<br>intentional.</h1>
+        </div>
 
-        <h2 class="qs-values-heading">
-            Our <span>Story</span>
-        </h2>
+        <div class="process-container" id="processSection">
+            <svg viewBox="0 0 1300 1000" preserveAspectRatio="none">
+                
+                <line x1="510" y1="50" x2="510" y2="200" class="v-line" />
+                <line x1="265" y1="290" x2="265" y2="440" class="v-line" />
+                <line x1="810" y1="440" x2="810" y2="590" class="v-line" />
+                <line x1="265" y1="730" x2="265" y2="880" class="v-line" />
+                <line x1="810" y1="900" x2="810" y2="1000" class="v-line" />
 
-        <p class="qs-values-text">
-            Qiro Tech started with one belief — technology should create real impact.
-            What began as a small group of passionate developers has evolved into a
-            digital partner for growing businesses.
-            <br><br>
-            Over the years, we’ve helped companies launch platforms,
-            automate operations and scale digitally in competitive markets.
-        </p>
+                <path class="base-path" d="M 510 50 C 150 130, 80 230, 265 290 C 450 350, 750 330, 810 440 C 870 550, 310 650, 265 730 C 220 810, 600 890, 810 900" />
+                
+                <path id="glowingLine" class="glowing-path" d="M 510 50 C 150 130, 80 230, 265 290 C 450 350, 750 330, 810 440 C 870 550, 310 650, 265 730 C 220 810, 600 890, 810 900" />
+            </svg>
 
+            <div id="movingDot" class="dot"></div>
+
+            <div class="steps">
+                <div class="step step-1" data-show="0" data-hide="15">
+                    <div class="step-meta">Step 01</div>
+                    <h3>Discover Needs And Ambitions.</h3>
+                </div>
+                <div class="step step-2" data-show="15" data-hide="40">
+                    <div class="step-meta">Step 02</div>
+                    <h3>Translate Into Design And Code.</h3>
+                </div>
+                <div class="step step-3" data-show="40" data-hide="65">
+                    <div class="step-meta">Step 03</div>
+                    <h3>Integrate Brand Voice And Narrative.</h3>
+                </div>
+                <div class="step step-4" data-show="65" data-hide="90">
+                    <div class="step-meta">Step 04</div>
+                    <h3>Refine With Detail And Modern Craft.</h3>
+                </div>
+                <div class="step step-5" data-show="90" data-hide="105">
+                    <div class="step-meta">Step 05</div>
+                    <h3>Launch & Monitor Product.</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- GLOW -->
-    <div class="qs-values-glow"></div>
+    <script>
+        const mainTitle = document.getElementById('mainTitle');
+        const processSection = document.getElementById('processSection');
+        const glowingLine = document.getElementById('glowingLine');
+        const movingDot = document.getElementById('movingDot');
+        const steps = document.querySelectorAll('.step');
 
-    <!-- CARDS -->
-    <div class="qs-values-grid">
+        const pathLength = glowingLine.getTotalLength();
+        glowingLine.style.strokeDasharray = pathLength;
+        glowingLine.style.strokeDashoffset = pathLength;
 
-        <!-- CARD 1 -->
-        <div class="qs-value-card">
+        window.addEventListener('scroll', () => {
+            const rect = processSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
 
-            <div class="qs-card-number">01</div>
+            // १. टायटल फेड करणे
+            let titleFade = 1 - (window.scrollY / 280);
+            if(titleFade < 0) titleFade = 0;
+            mainTitle.style.opacity = titleFade;
+            mainTitle.style.transform = `translateY(${-window.scrollY * 0.1}px)`;
 
-            <h3>
-                Empowering Through Action
-            </h3>
+            // २. प्रोग्रेस ट्रॅकर
+            let scrollPercent = (windowHeight / 2 - rect.top) / rect.height;
+            if (scrollPercent < 0) scrollPercent = 0;
+            if (scrollPercent > 1) scrollPercent = 1;
 
-            <p>
-                We focus on execution, not just ideas.
-                Our team builds solutions that automate workflows,
-                reduce manual effort and increase business efficiency.
-            </p>
+            const percentPercent = scrollPercent * 100;
 
-        </div>
+            // ३. रेषा आणि ऑरेंज डॉट मूव्हमेंट
+            glowingLine.style.strokeDashoffset = pathLength - (scrollPercent * pathLength);
+            movingDot.style.offsetDistance = percentPercent + "%";
 
-        <!-- CARD 2 -->
-        <div class="qs-value-card">
+            // ४. स्टेप्स व्हिजिबिलिटी
+            steps.forEach(step => {
+                const showAt = parseFloat(step.getAttribute('data-show'));
+                const hideAt = parseFloat(step.getAttribute('data-hide'));
 
-            <div class="qs-card-number">02</div>
-
-            <h3>
-                Building Scalable Solutions
-            </h3>
-
-            <p>
-                Every product we develop is designed to deliver
-                measurable value, seamless performance and
-                long-term scalability for growing businesses.
-            </p>
-
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="qs-value-card">
-
-            <div class="qs-card-number">03</div>
-
-            <h3>
-                Who We Are
-            </h3>
-
-            <p>
-                We are designers, engineers and problem-solvers
-                passionate about creating meaningful digital experiences
-                through collaboration, innovation and transparency.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+                if (percentPercent >= showAt && percentPercent <= hideAt) {
+                    step.classList.add('visible');
+                } else {
+                    step.classList.remove('visible');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
