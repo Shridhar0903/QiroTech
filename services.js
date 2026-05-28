@@ -1,3 +1,20 @@
+// ================================
+// SERVICES HOVER + ACTIVE EFFECT
+// ================================
+
+const serviceItems = document.querySelectorAll(".service-item");
+
+serviceItems.forEach((item) => {
+  // HOVER ACTIVE
+  item.addEventListener("mouseenter", () => {
+    serviceItems.forEach((el) => {
+      el.classList.remove("active");
+    });
+
+    item.classList.add("active");
+  });
+});
+
 // ===============================
 // PROCESS TIMELINE ANIMATION
 // SMOOTH VERSION
