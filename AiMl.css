@@ -1,0 +1,537 @@
+/* =========================
+   RESET
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root{
+  --bg:#ffffff;
+  --bg-2:#ecebe8;
+  --text:#101722;
+  --muted:#8f918f;
+  --line:#252b35;
+  --accent:#ff7b22;
+  --dark:#0b1420;
+  --white:#ffffff;
+  --header-h:104px;
+  --qiro:#14637b;
+}
+
+/* Smooth scrolling */
+html{
+  scroll-behavior:smooth;
+}
+
+/* Body base style */
+body{
+  font-family:'Outfit', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* Remove default underline */
+a{
+  text-decoration:none;
+}
+
+
+/* =========================================
+   AI & IOT HERO SECTION
+========================================= */
+
+.aiiot-hero-section{
+  background:#f7f9fc;
+
+  min-height:320px;
+
+  margin-top:60px;
+
+  padding:34px 40px 24px;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+
+  text-align:center;
+
+  font-family:'Outfit', sans-serif;
+
+  overflow:hidden;
+}
+
+.aiiot-hero-inner{
+  width:100%;
+  max-width:1680px;
+}
+
+.aiiot-hero-kicker{
+  margin:0 0 18px;
+
+  color:#14637b;
+
+  font-size:18px;
+  line-height:1;
+
+  font-weight:400;
+
+  letter-spacing:.2px;
+}
+
+.aiiot-hero-title{
+  margin:0;
+
+  color:#081826;
+
+  font-size:clamp(78px, 10vw, 150px);
+
+  line-height:.9;
+
+  letter-spacing:-6px;
+
+  font-weight:500;
+}
+
+.aiiot-hero-text{
+  margin:34px auto 0;
+
+  max-width:1050px;
+
+  color:#18232e;
+
+  font-size:clamp(22px, 1.8vw, 36px);
+
+  line-height:1.12;
+
+  font-weight:300;
+}
+
+.aiiot-hero-text span{
+  color:#7f8a93;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width:1200px){
+
+  .aiiot-hero-title{
+    letter-spacing:-3px;
+  }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width:768px){
+
+  .aiiot-hero-section{
+    min-height:280px;
+
+    padding:34px 16px 24px;
+  }
+
+  .aiiot-hero-kicker{
+    font-size:14px;
+
+    margin-bottom:12px;
+  }
+
+  .aiiot-hero-title{
+    font-size:clamp(52px, 14vw, 88px);
+
+    letter-spacing:-2px;
+  }
+
+  .aiiot-hero-text{
+    margin-top:18px;
+
+    font-size:16px;
+
+    line-height:1.2;
+  }
+
+}
+/* =========================================
+   OPEN INNOVATION SECTION
+========================================= */
+
+.open-innovation-section{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#f7f9fc;
+
+  padding:70px 46px 90px;
+
+  font-family:'Outfit', sans-serif;
+}
+
+/* GLOW */
+
+.open-innovation-glow{
+  position:absolute;
+
+  left:-180px;
+  bottom:-180px;
+
+  width:900px;
+  height:420px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(circle,
+    rgba(20,99,123,.24) 0%,
+    rgba(20,99,123,.10) 30%,
+    rgba(20,99,123,.04) 55%,
+    transparent 76%);
+
+  filter:blur(90px);
+
+  pointer-events:none;
+}
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.open-innovation-top{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  gap:40px;
+
+  align-items:start;
+
+  margin-bottom:56px;
+}
+
+/* PILL */
+
+.open-innovation-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:40px;
+
+  padding:0 16px;
+
+  border:1.4px solid #90a1ab;
+
+  border-radius:999px;
+
+  color:#6d7983;
+
+  font-size:15px;
+  font-weight:300;
+
+  background:rgba(255,255,255,.55);
+
+  backdrop-filter:blur(10px);
+
+  margin-bottom:24px;
+}
+
+/* TITLE */
+
+.open-innovation-title{
+  margin:0;
+
+  color:#081826;
+
+  font-size:clamp(58px, 6vw, 118px);
+
+  line-height:.92;
+
+  letter-spacing:-4px;
+
+  font-weight:300;
+}
+
+.open-innovation-title span{
+  color:#14637b;
+  font-weight:600;
+}
+
+/* RIGHT TEXT */
+
+.open-innovation-right{
+  display:flex;
+  justify-content:flex-end;
+
+  padding-top:18px;
+}
+
+.open-innovation-right p{
+  margin:0;
+
+  max-width:520px;
+
+  color:#52606a;
+
+  font-size:clamp(20px, 1.3vw, 28px);
+
+  line-height:1.2;
+
+  font-weight:300;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.open-innovation-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:26px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.open-innovation-card{
+  position:relative;
+
+  overflow:hidden;
+
+  min-height:480px;
+
+  border-radius:34px;
+
+  padding:36px 30px;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,.92) 0%,
+    rgba(255,255,255,.72) 100%
+  );
+
+  border:1px solid rgba(20,99,123,.08);
+
+  backdrop-filter:blur(16px);
+
+  transition:
+  transform .45s ease,
+  border-color .45s ease,
+  box-shadow .45s ease;
+}
+
+.open-innovation-card:hover{
+  transform:translateY(-10px);
+
+  border-color:rgba(20,99,123,.22);
+
+  box-shadow:
+  0 18px 40px rgba(20,99,123,.08),
+  0 6px 16px rgba(20,99,123,.06);
+}
+
+/* ICON */
+
+.open-innovation-icon{
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:34px;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(20,99,123,.12),
+    rgba(20,99,123,.04)
+  );
+
+  border:1px solid rgba(20,99,123,.12);
+
+  color:#14637b;
+
+  font-size:26px;
+
+  transition:.45s ease;
+}
+
+.open-innovation-card:hover .open-innovation-icon{
+  background:#14637b;
+  color:#fff;
+
+  transform:scale(1.06);
+}
+
+/* STEP */
+
+.open-innovation-step{
+  color:#14637b;
+
+  font-size:14px;
+  font-weight:500;
+
+  letter-spacing:1.5px;
+
+  margin-bottom:24px;
+}
+
+/* TITLE */
+
+.open-innovation-card h3{
+  margin:0 0 18px;
+
+  color:#081826;
+
+  font-size:clamp(30px,2vw,42px);
+
+  line-height:1.05;
+
+  letter-spacing:-1px;
+
+  font-weight:400;
+}
+
+/* TEXT */
+
+.open-innovation-card p{
+  margin:0 0 34px;
+
+  color:#67737d;
+
+  font-size:17px;
+
+  line-height:1.6;
+
+  font-weight:300;
+}
+
+/* FEATURES */
+
+.open-innovation-features{
+  display:flex;
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.open-feature{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  color:#081826;
+
+  font-size:17px;
+
+  font-weight:400;
+}
+
+.open-feature span{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#14637b;
+
+  box-shadow:0 0 16px rgba(20,99,123,.4);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width:1200px){
+
+  .open-innovation-top{
+    grid-template-columns:1fr;
+  }
+
+  .open-innovation-right{
+    justify-content:flex-start;
+
+    padding-top:0;
+  }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+  .open-innovation-section{
+    padding:30px 16px 50px;
+  }
+
+  .open-innovation-title{
+    font-size:clamp(42px,11vw,74px);
+
+    letter-spacing:-2px;
+  }
+
+  .open-innovation-right p{
+    font-size:17px;
+  }
+
+  .open-innovation-grid{
+    grid-template-columns:1fr;
+
+    gap:18px;
+  }
+
+  .open-innovation-card{
+    min-height:auto;
+
+    border-radius:26px;
+
+    padding:26px 22px;
+  }
+
+  .open-innovation-icon{
+    width:58px;
+    height:58px;
+
+    font-size:22px;
+  }
+
+  .open-innovation-card h3{
+    font-size:28px;
+  }
+
+  .open-innovation-card p{
+    font-size:15px;
+  }
+
+  .open-feature{
+    font-size:15px;
+  }
+
+}
