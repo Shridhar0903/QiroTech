@@ -121,6 +121,14 @@ function clamp(value, min, max) {
 // =========================
 
 function animateOrbOnScroll() {
+  if (window.innerWidth <= 1024) {
+    orbStage.style.transform = "";
+    orbShell.style.borderRadius = "";
+    orbShell.style.filter = "";
+    orbShadow.style.transform = "";
+    orbShadow.style.opacity = "";
+    return;
+  }
   if (!orbStage || !orbShell || !orbShadow) return;
 
   const headerHeight = header ? header.offsetHeight : 0;

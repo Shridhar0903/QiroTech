@@ -251,11 +251,13 @@ a{
   background: #ebf7f8;
   border-radius: 26px;
   box-shadow: 0 20px 60px rgba(0,0,0,.08);
-  overflow: hidden;
+  
+    overflow-y: auto; /* add this */
 
   transform: translateY(26px) scale(.985);
   transition: transform .45s cubic-bezier(.22,1,.36,1);
 }
+
 .menu-overlay.active .menu-panel{
   transform: translateY(0) scale(1);
 }
@@ -494,64 +496,237 @@ a{
   font-size: 16px;
 }
 
-@media (max-width: 1200px){
-  .menu-content{
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 90px 28px 150px;
-    overflow: auto;
-    height: 100%;
+/* ==========================================
+   LARGE TABLETS (1024px)
+========================================== */
+@media (max-width: 1024px){
+
+  .topbar{
+    padding: 0 20px;
   }
 
-  .menu-bottom{
-    left: 28px;
-    right: 28px;
-    bottom: 24px;
-    grid-template-columns: 1fr;
-    justify-items: start;
+  .logo img{
+    height: 80px;
   }
 
-  .menu-policies{
-    justify-content: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 768px){
-  .menu-overlay{
-    padding: 10px;
+  .nav-center{
+    gap: 24px;
   }
 
-  .menu-close{
-    top: 16px;
-    right: 16px;
-    width: 58px;
-    height: 58px;
-    font-size: 28px;
-    border-radius: 18px;
+  .nav-center a{
+    font-size: 16px;
   }
 
   .menu-content{
-    padding: 84px 18px 150px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .menu-left{
+    grid-column: 1 / -1;
   }
 
   .menu-title{
-    font-size: clamp(42px, 10vw, 66px);
-    letter-spacing: -2px;
+    font-size: 54px;
+  }
+
+  
+  .menu-bottom{
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 20px 24px 20px;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+/* ==========================================
+   TABLETS (768px)
+========================================== */
+@media (max-width: 768px){
+
+  .topbar{
+    height: 80px;
+    padding: 0 16px;
+  }
+
+  .logo img{
+    height: 65px;
+  }
+
+  .divider,
+  .audio-trigger,
+  .talk-link,
+  .nav-center{
+    display: none;
+  }
+
+  .menu-btn{
+    width: 60px;
+    gap: 8px;
+  }
+
+  .menu-btn span{
+    width: 60px;
+    height: 3px;
+  }
+
+  .menu-overlay{
+    padding: 12px;
+  }
+
+  .menu-content{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 80px 24px 140px;
+  }
+
+  .menu-title{
+    font-size: 46px;
+    letter-spacing: -1px;
+  }
+
+  .menu-email{
+    margin-bottom: 30px;
+    font-size: 16px;
   }
 
   .menu-link{
     font-size: 22px;
   }
 
-  .menu-bottom{
-    left: 18px;
+  .menu-close{
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    top: 18px;
     right: 18px;
+  }
+
+  .menu-bottom{
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 5px 24px 50px;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+
+  .menu-policies{
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================
+   MOBILE (576px)
+========================================== */
+@media (max-width: 576px){
+
+  .topbar{
+    height: 74px;
+    padding: 0 14px;
+  }
+
+  .logo img{
+    height: 55px;
+  }
+
+  .menu-content{
+    padding: 75px 18px 110px;
+  }
+
+  .menu-title{
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .menu-kicker{
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .menu-line{
+    width: 50px;
+  }
+
+  .menu-email{
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .menu-talk-btn{
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .menu-col-title{
+    font-size: 14px;
+  }
+
+  .menu-link{
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .menu-close{
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 24px;
+  }
+
+  .menu-copy,
+  .menu-policies a{
+    font-size: 13px;
+  }
+
+  .menu-socials a{
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (400px)
+========================================== */
+@media (max-width: 400px){
+
+  .logo img{
+    height: 48px;
+  }
+
+  .menu-title{
+    font-size: 28px;
+  }
+
+  .menu-link{
+    font-size: 17px;
+  }
+
+  .menu-content{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .menu-btn span{
+    width: 48px;
   }
 }
 
 
+
+/* ====================================================================================== */
 
 .hero{
   position:relative;
@@ -836,6 +1011,135 @@ a{
     transform: translateY(-20px) scale(1.02);
   }
 }
+
+@media (max-width:1024px){
+
+  .hero-inner{
+    grid-template-columns: 1fr;
+    text-align:center;
+    align-items:center;
+    gap:40px;
+    padding:40px 24px 60px;
+  }
+
+  .hero-left,
+  .hero-right{
+    max-width:700px;
+    margin:auto;
+    padding-bottom:0;
+  }
+
+  .hero-center{
+    min-height:auto;
+    order:2;
+  }
+
+  .hero-left{
+    order:1;
+  }
+
+  .hero-right{
+    order:3;
+  }
+
+  .orb-stage{
+    width:min(55vw,500px);
+    height:min(55vw,500px);
+  }
+
+  .pills{
+    justify-content:center;
+  }
+}
+
+@media (max-width:768px){
+
+  .hero{
+    overflow:hidden;
+  }
+
+  .hero-inner{
+    grid-template-columns:1fr;
+    min-height:auto;
+    padding:30px 20px 60px;
+    gap:30px;
+  }
+
+  .hero-left h1{
+    font-size:36px;
+    line-height:1.05;
+  }
+
+  .hero-left p{
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  .hero-right p{
+    font-size:16px;
+    line-height:1.5;
+  }
+
+  .orb-stage{
+    width:320px;
+    height:320px;
+    min-width:320px;
+    min-height:320px;
+  }
+
+  .orb-floor-shadow{
+    width:240px;
+    bottom:-70px;
+  }
+
+  .cta-btn{
+    padding:14px 24px;
+    font-size:12px;
+  }
+
+  .pills{
+    justify-content:center;
+  }
+
+  .hero-right{
+    margin:auto;
+  }
+}
+
+@media (max-width:480px){
+
+  .hero-inner{
+    padding:20px 16px 50px;
+  }
+
+  .hero-left h1{
+    font-size:30px;
+  }
+
+  .hero-left p,
+  .hero-right p{
+    font-size:14px;
+  }
+
+  .orb-stage{
+    width:260px;
+    height:260px;
+    min-width:260px;
+    min-height:260px;
+  }
+
+  .cta-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .pill{
+    font-size:11px;
+    min-height:34px;
+    padding:0 12px;
+  }
+}
+
 /* =============================
 Hero-next 
 ============================= */
@@ -1983,8 +2287,8 @@ MOBILE
   }
 
   .build-blob{
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
   }
 
   .build-stack-section.active .build-blob{
@@ -2005,7 +2309,7 @@ MOBILE
   }
 
   .build-pill{
-    padding: 10px 16px;
+    padding: 10px 8px;
     font-size: 12px;
   }
 
@@ -2029,24 +2333,135 @@ MOBILE
     right: 8%;
   }
 
+    .build-stack-section.active .build-blob{
+    width:300px;
+    height:300px;
+  }
+
+  .build-content h2{
+    font-size:40px;
+    letter-spacing:-3px;
+  }
+
+  .build-content p{
+    font-size:18px;
+  }
+
+
   .build-stack-section.active .pill-ui{
-    top: 12%;
-    left: 4%;
+    top: 20%;
+    left: 2%;
   }
 
   .build-stack-section.active .pill-dev{
-    top: 12%;
-    right: 4%;
+    top: 20%;
+    right: 2%;
   }
 
   .build-stack-section.active .pill-brand{
-    bottom: 14%;
-    left: 4%;
+    bottom:20%;
+    left: 2%;
   }
 
   .build-stack-section.active .pill-anim{
-    bottom: 14%;
-    right: 4%;
+    bottom: 20%;
+    right: 2%;
+  }
+
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (min-width:769px) and (max-width:1024px){
+
+  .build-stack-wrap{
+    height:200vh;
+  }
+
+  .build-top-content{
+    top:50px;
+    left:40px;
+  }
+
+  .build-top-content h3{
+    font-size:48px;
+  }
+
+  .build-top-para{
+    top:70px;
+    right:40px;
+    width:280px;
+  }
+
+  .build-top-para p{
+    font-size:18px;
+  }
+
+  .build-blob{
+    width:320px;
+    height:320px;
+  }
+
+  .build-stack-section.active .build-blob{
+    width:500px;
+    height:500px;
+  }
+
+  .build-content h2{
+    font-size:82px;
+    letter-spacing:-3px;
+  }
+
+  .build-content p{
+    font-size:18px;
+  }
+
+  .build-pill{
+    width:160px;
+    padding:12px 10px;
+    font-size:13px;
+  }
+
+  .pill-ui{
+    top:30%;
+    left:12%;
+  }
+
+  .pill-dev{
+    top:30%;
+    right:12%;
+  }
+
+  .pill-brand{
+    bottom:30%;
+    left:12%;
+  }
+
+  .pill-anim{
+    bottom:30%;
+    right:12%;
+  }
+
+  .build-stack-section.active .pill-ui{
+    top:16%;
+    left:8%;
+  }
+
+  .build-stack-section.active .pill-dev{
+    top:16%;
+    right:8%;
+  }
+
+  .build-stack-section.active .pill-brand{
+    bottom:12%;
+    left:8%;
+  }
+
+  .build-stack-section.active .pill-anim{
+    bottom:12%;
+    right:8%;
   }
 
 }
@@ -2326,6 +2741,202 @@ showcase Section
   .portfolio-dark-title{
     font-size:clamp(30px, 8vw, 44px);
     gap:12px;
+  }
+}
+
+/* ==========================================
+   TABLET (769px - 1024px)
+========================================== */
+@media (min-width:769px) and (max-width:1024px){
+
+  .showcase-section{
+    padding:36px 24px 32px;
+  }
+
+  .showcase-title{
+    font-size:56px;
+  }
+
+  .showcase-thumb{
+    height:340px;
+  }
+
+  .filter-btn{
+    min-height:56px;
+    padding:0 32px;
+    font-size:18px;
+  }
+
+  .showcase-card-title{
+    font-size:42px;
+  }
+
+  .portfolio-dark-section{
+    padding:36px 24px 40px;
+  }
+
+  .portfolio-dark-thumb{
+    height:260px;
+  }
+
+  .portfolio-dark-title{
+    font-size:42px;
+  }
+}
+
+/* ==========================================
+   MOBILE (768px)
+========================================== */
+@media (max-width:768px){
+
+  .showcase-section{
+    padding:24px 16px;
+  }
+
+  .showcase-top{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+  }
+
+  .showcase-title{
+    font-size:42px;
+    line-height:1;
+  }
+
+  .showcase-viewall span:first-child{
+    padding:0 14px;
+    font-size:15px;
+  }
+
+  .showcase-viewall-icon{
+    width:28px;
+    height:28px;
+    font-size:15px;
+  }
+
+  .showcase-filters{
+    gap:10px;
+  }
+
+  .filter-btn{
+    min-height:44px;
+    padding:0 18px;
+    font-size:14px;
+  }
+
+  .showcase-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+
+  .showcase-thumb{
+    height:260px;
+    border-radius:18px;
+  }
+
+  .showcase-meta{
+    font-size:13px;
+  }
+
+  .showcase-card-title{
+    font-size:28px;
+    gap:10px;
+  }
+
+  /* Portfolio */
+
+  .portfolio-dark-section{
+    padding:24px 16px 30px;
+  }
+
+  .portfolio-dark-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .portfolio-dark-thumb{
+    height:240px;
+    border-radius:18px;
+  }
+
+  .portfolio-dark-meta{
+    font-size:13px;
+    margin-top:12px;
+  }
+
+  .portfolio-dark-title{
+    font-size:28px;
+    gap:10px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (480px)
+========================================== */
+@media (max-width:480px){
+
+  .showcase-title{
+    font-size:34px;
+  }
+
+  .showcase-thumb{
+    height:220px;
+  }
+
+  .filter-btn{
+    min-height:40px;
+    padding:0 14px;
+    font-size:12px;
+  }
+
+  .showcase-card-title{
+    font-size:24px;
+  }
+
+  .showcase-meta{
+    font-size:12px;
+  }
+
+  .portfolio-dark-thumb{
+    height:200px;
+  }
+
+  .portfolio-dark-title{
+    font-size:24px;
+  }
+
+  .portfolio-dark-meta{
+    font-size:12px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES (360px)
+========================================== */
+@media (max-width:360px){
+
+  .showcase-section,
+  .portfolio-dark-section{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  .showcase-title{
+    font-size:30px;
+  }
+
+  .showcase-thumb{
+    height:190px;
+  }
+
+  .portfolio-dark-thumb{
+    height:180px;
+  }
+
+  .showcase-card-title,
+  .portfolio-dark-title{
+    font-size:22px;
   }
 }
 
@@ -2651,6 +3262,218 @@ showcase Section
   }
 }
 
+/* ==========================================
+   TABLET (769px - 1024px)
+========================================== */
+@media (min-width:769px) and (max-width:1024px){
+
+  .contact-mdx-left{
+    padding:60px 40px;
+  }
+
+  .contact-mdx-right{
+    padding:60px 40px;
+  }
+
+  .contact-mdx-title{
+    font-size:58px;
+  }
+
+  .contact-mdx-form-title{
+    font-size:54px;
+    margin-bottom:36px;
+  }
+
+  .contact-mdx-grid{
+    gap:28px 20px;
+  }
+
+  .field input,
+  .field textarea{
+    font-size:20px;
+  }
+
+  .interest-chip span{
+    padding:0 18px;
+    font-size:15px;
+  }
+}
+
+/* ==========================================
+   MOBILE (768px)
+========================================== */
+@media (max-width:768px){
+
+  .contact-mdx-section{
+    display:block;
+  }
+
+  .contact-mdx-left{
+    padding:40px 20px 30px;
+  }
+
+  .contact-mdx-right{
+    padding:36px 20px 40px;
+  }
+
+  .contact-mdx-title{
+    font-size:42px;
+    line-height:1;
+    letter-spacing:-1px;
+  }
+
+  .contact-mdx-form-title{
+    font-size:38px;
+    letter-spacing:-1px;
+    margin-bottom:28px;
+  }
+
+  .contact-mdx-line{
+    margin:24px 0;
+  }
+
+  .contact-mdx-mail{
+    font-size:15px;
+    word-break:break-word;
+  }
+
+  .contact-mdx-socials{
+    padding-top:24px;
+  }
+
+  .contact-mdx-socials a{
+    width:38px;
+    height:38px;
+    font-size:16px;
+  }
+
+  .contact-mdx-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+    margin-bottom:24px;
+  }
+
+  .field input,
+  .field textarea{
+    font-size:17px;
+    padding:16px 0 10px;
+  }
+
+  .field textarea{
+    min-height:100px;
+  }
+
+  .field label{
+    font-size:15px;
+  }
+
+  .interest-label{
+    font-size:15px;
+  }
+
+  .interest-options{
+    gap:8px;
+  }
+
+  .interest-chip span{
+    min-height:38px;
+    padding:0 14px;
+    font-size:13px;
+  }
+
+  .contact-mdx-submit{
+    min-height:54px;
+    font-size:16px;
+    letter-spacing:1px;
+  }
+
+  .contact-mdx-submit .arrow{
+    font-size:22px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (480px)
+========================================== */
+@media (max-width:480px){
+
+  .contact-mdx-left{
+    padding:32px 16px 24px;
+  }
+
+  .contact-mdx-right{
+    padding:28px 16px 34px;
+  }
+
+  .contact-mdx-kicker{
+    font-size:14px;
+  }
+
+  .contact-mdx-title{
+    font-size:34px;
+  }
+
+  .contact-mdx-form-title{
+    font-size:32px;
+  }
+
+  .contact-mdx-mail{
+    font-size:13px;
+  }
+
+  .field input,
+  .field textarea{
+    font-size:15px;
+  }
+
+  .field label{
+    font-size:13px;
+  }
+
+  .interest-label{
+    font-size:13px;
+  }
+
+  .interest-chip span{
+    min-height:34px;
+    padding:0 12px;
+    font-size:12px;
+  }
+
+  .contact-mdx-socials a{
+    width:34px;
+    height:34px;
+    font-size:14px;
+  }
+
+  .contact-mdx-submit{
+    min-height:50px;
+    font-size:14px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL (360px)
+========================================== */
+@media (max-width:360px){
+
+  .contact-mdx-title{
+    font-size:30px;
+  }
+
+  .contact-mdx-form-title{
+    font-size:28px;
+  }
+
+  .interest-chip span{
+    padding:0 10px;
+    font-size:11px;
+  }
+
+  .contact-mdx-submit{
+    font-size:13px;
+  }
+}
 /* ====================footer==================================== */
 .footer-mdx{
   background:#000;
@@ -2936,5 +3759,200 @@ showcase Section
 
   .footer-mdx-scrolltop{
     font-size:16px;
+  }
+}
+/* ==========================================
+   TABLET (769px - 1024px)
+========================================== */
+
+@media (min-width:769px) and (max-width:1024px){
+
+  .footer-mdx{
+    padding:36px 28px 24px;
+  }
+
+  .footer-mdx-heading{
+    font-size:64px;
+  }
+
+  .footer-mdx-email{
+    font-size:22px;
+  }
+
+  .footer-mdx-nav{
+    gap:24px;
+  }
+
+  .footer-mdx-nav a{
+    font-size:20px;
+  }
+
+  .footer-mdx-logo{
+    font-size:220px;
+    letter-spacing:-12px;
+  }
+
+  .footer-mdx-socials a{
+    font-size:24px;
+  }
+
+  .footer-mdx-meta{
+    font-size:15px;
+  }
+}
+
+/* ==========================================
+   MOBILE (768px)
+========================================== */
+
+@media (max-width:768px){
+
+  .footer-mdx{
+    padding:28px 16px 18px;
+  }
+
+  .footer-mdx-top{
+    gap:28px;
+  }
+
+  .footer-mdx-heading{
+    font-size:42px;
+    line-height:1;
+    letter-spacing:-1px;
+    margin-bottom:20px;
+  }
+
+  .footer-mdx-email{
+    font-size:16px;
+    gap:8px;
+    flex-wrap:wrap;
+    word-break:break-word;
+  }
+
+  .footer-mdx-email-icon,
+  .footer-mdx-email-icon svg{
+    width:18px;
+    height:18px;
+  }
+
+  .footer-mdx-nav{
+    gap:14px;
+  }
+
+  .footer-mdx-nav a{
+    font-size:16px;
+  }
+
+  .footer-mdx-divider{
+    margin:24px 0 18px;
+  }
+
+  .footer-mdx-logo-row{
+    gap:8px;
+  }
+
+  .footer-mdx-logo{
+    font-size:120px;
+    line-height:.85;
+    letter-spacing:-6px;
+  }
+
+  .footer-mdx-bottom{
+    margin-top:20px;
+    gap:18px;
+  }
+
+  .footer-mdx-socials{
+    gap:16px;
+  }
+
+  .footer-mdx-socials a{
+    font-size:18px;
+  }
+
+  .footer-mdx-meta{
+    justify-content:flex-start;
+    gap:10px 20px;
+    font-size:13px;
+  }
+
+  .footer-mdx-scrolltop{
+    font-size:14px;
+  }
+
+  .footer-mdx-scrolltop-icon{
+    width:20px;
+    height:20px;
+    font-size:11px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (480px)
+========================================== */
+
+@media (max-width:480px){
+
+  .footer-mdx{
+    padding:24px 14px 16px;
+  }
+
+  .footer-mdx-heading{
+    font-size:34px;
+  }
+
+  .footer-mdx-email{
+    font-size:14px;
+  }
+
+  .footer-mdx-nav{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .footer-mdx-nav a{
+    font-size:15px;
+  }
+
+  .footer-mdx-logo{
+    font-size:90px;
+    letter-spacing:-4px;
+  }
+
+  .footer-mdx-socials a{
+    font-size:16px;
+  }
+
+  .footer-mdx-meta{
+    font-size:12px;
+  }
+
+  .footer-mdx-scrolltop{
+    font-size:13px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL (360px)
+========================================== */
+
+@media (max-width:360px){
+
+  .footer-mdx-heading{
+    font-size:28px;
+  }
+
+  .footer-mdx-email{
+    font-size:12px;
+  }
+
+  .footer-mdx-logo{
+    font-size:72px;
+    letter-spacing:-2px;
+  }
+
+  .footer-mdx-meta{
+    font-size:11px;
   }
 }

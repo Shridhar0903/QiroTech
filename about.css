@@ -967,3 +967,331 @@ font-size: 18px; /* Increased from 11px */
         left: 50%;
     }
 }
+
+
+/* =========================================================
+   TABLET RESPONSIVE (1024px)
+========================================================= */
+
+@media (max-width:1024px){
+
+  /* ================= ABOUT HERO ================= */
+
+  .About-hero-circle{
+    width:800px;
+    height:800px;
+    top:25%;
+  }
+
+  .About-hero-glow{
+    width:450px;
+    height:450px;
+  }
+
+  .About-hero-title{
+    font-size:clamp(50px,7vw,80px);
+  }
+
+  .About-hero-text{
+    max-width:650px;
+    font-size:16px;
+  }
+
+  /* ================= VIDEO ================= */
+
+  .about-showreel-card{
+    height:420px;
+    margin:20px;
+  }
+
+  .about-top-info{
+    padding:0 25px;
+  }
+
+  .about-action-text{
+    font-size:18px;
+  }
+
+  /* ================= ABOUT SECTION ================= */
+
+  .about-section{
+    min-height:auto;
+    padding:120px 24px;
+  }
+
+  .about-section::before{
+    width:850px;
+    height:850px;
+  }
+
+  .about-aura-container{
+    width:900px;
+    height:900px;
+  }
+
+  .orange-aura{
+    width:500px;
+    height:500px;
+  }
+
+  .yellow-aura{
+    width:380px;
+    height:380px;
+  }
+
+  .about-heading{
+    font-size:clamp(54px,8vw,90px);
+  }
+
+  .about-subheading{
+    font-size:18px;
+    max-width:850px;
+  }
+
+  /* ================= VALUES ================= */
+
+  .qs-values-top{
+    flex-direction:column;
+    gap:30px;
+  }
+
+  .qs-values-heading{
+    font-size:72px;
+  }
+
+  .qs-values-text{
+    max-width:100%;
+    font-size:18px;
+  }
+
+  .qs-values-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* ================= UI CONTAINER ================= */
+
+  .ui-container{
+    flex-direction:column;
+    height:auto;
+    padding:50px 30px;
+    gap:40px;
+  }
+
+  .left-section{
+    width:100%;
+  }
+
+  .right-section{
+    width:100%;
+    justify-content:flex-start;
+  }
+
+  .left-section .title{
+    font-size:56px;
+  }
+
+  .right-section p{
+    font-size:18px;
+  }
+
+  .left-section::before{
+    width:500px;
+    height:500px;
+    left:50%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE (768px)
+========================================================= */
+
+@media (max-width:768px){
+
+  
+
+  /* ================= VIDEO ================= */
+
+  .about-showreel-card{
+    height:260px;
+    border-radius:16px;
+    margin:15px;
+  }
+
+  .about-top-info{
+    padding:0 14px;
+    top:15px;
+  }
+
+  .about-brand-logo{
+    font-size:12px;
+  }
+
+  .about-charging-info .label{
+    font-size:10px;
+  }
+
+  .about-charging-info .value{
+    font-size:16px;
+  }
+
+  .about-play-action-center{
+    gap:10px;
+  }
+
+  .about-play-icon{
+    width:28px;
+    height:28px;
+  }
+
+  .about-action-text{
+    font-size:14px;
+  }
+
+  /* ================= ABOUT SECTION ================= */
+
+  .about-section{
+    padding:90px 20px;
+    min-height:auto;
+  }
+
+  .about-section::before{
+    width:520px;
+    height:520px;
+  }
+
+  .about-aura-container{
+    width:600px;
+    height:600px;
+  }
+
+  .orange-aura{
+    width:280px;
+    height:280px;
+  }
+
+  .yellow-aura{
+    width:220px;
+    height:220px;
+  }
+
+  .about-heading{
+    font-size:46px;
+    line-height:1.05;
+  }
+
+  .about-subheading{
+    font-size:15px;
+    line-height:1.6;
+    margin:20px auto 30px;
+  }
+
+  .about-button{
+    font-size:14px;
+    padding:8px 16px;
+  }
+
+  /* ================= VALUES ================= */
+
+  .qs-values-section{
+    padding:60px 18px;
+    border-radius:24px;
+  }
+
+  .qs-values-heading{
+    font-size:42px;
+  }
+
+  .qs-values-text{
+    font-size:15px;
+  }
+
+  .qs-card-number{
+    width:46px;
+    height:46px;
+    margin-bottom:40px;
+  }
+
+  .qs-value-card{
+    padding:22px;
+    border-radius:20px;
+  }
+
+  .qs-value-card h3{
+    font-size:24px;
+  }
+
+  .qs-value-card p{
+    font-size:14px;
+  }
+
+  /* ================= UI CONTAINER ================= */
+
+  .ui-container{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:35px;
+  }
+
+  .left-section{
+    width:100%;
+  }
+
+  .right-section{
+    width:100%;
+    margin-top:0;
+  }
+
+  .left-section .title{
+    font-size:38px;
+    line-height:1.15;
+    letter-spacing:-1px;
+  }
+
+  .tag-button{
+    font-size:12px;
+    padding:8px 14px;
+    margin-bottom:20px;
+  }
+
+  .right-section p{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  .left-section::before{
+    width:280px;
+    height:280px;
+    top:20%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE (480px)
+========================================================= */
+
+@media (max-width:480px){
+
+  .About-hero-title{
+    font-size:34px;
+  }
+
+  .about-heading{
+    font-size:36px;
+  }
+
+  .qs-values-heading{
+    font-size:34px;
+  }
+
+  .left-section .title{
+    font-size:32px;
+  }
+
+  .about-showreel-card{
+    height:220px;
+  }
+
+}
