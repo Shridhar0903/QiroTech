@@ -2311,6 +2311,7 @@ MOBILE
   .build-pill{
     padding: 10px 8px;
     font-size: 12px;
+    width: 125px;
   }
 
   .pill-ui{
