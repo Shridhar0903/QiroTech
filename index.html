@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QiroTech Innovation</title>
+  <title>QiroTech Innovation</title>
 
-    <!-- Google font -->
+  <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,23 +16,23 @@
   <link rel="stylesheet" href="style2.css">
 
 </head>
+
 <body>
- <!-- ==============================header============================ -->
-  <header class="topbar">
+  <!-- ==============================header============================ -->
+  <header class="topbar" id="navbar">
     <div class="nav-left">
-    <div class="logo">
-      <img src="img/logo.png" alt="MDX Logo">
-    </div>
+      <div class="logo">
+        <img src="img/logo.png" alt="MDX Logo">
+      </div>
       <div class="divider"></div>
 
-      <!-- Audio trigger button -->
-      <button class="audio-trigger" id="audioTrigger" aria-label="Play sound">—</button>
+
     </div>
 
     <!-- Center nav links -->
     <nav class="nav-center">
       <a href="index.html" class="active">Home</a>
-       <a href="about.html">About</a>
+      <a href="about.html">About</a>
       <a href="carrer.html">Careers</a>
       <a href="services.html">Services</a>
     </nav>
@@ -50,121 +51,121 @@
   </header>
 
   <!-- MENU OVERLAY -->
-<div class="menu-overlay" id="menuOverlay">
-  <div class="menu-panel">
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-panel">
 
-    <!-- close button -->
-    <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+      <!-- close button -->
+      <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
 
-    <div class="menu-content">
-      <!-- LEFT -->
-      <div class="menu-left">
-        <div class="menu-kicker">
-          <span class="menu-dot"></span>
-          <span>Connect with us!</span>
+      <div class="menu-content">
+        <!-- LEFT -->
+        <div class="menu-left">
+          <div class="menu-kicker">
+            <span class="menu-dot"></span>
+            <span>Connect with us!</span>
+          </div>
+
+          <h2 class="menu-title">
+            Tell us about your project. <br>
+            Let’s collaborate and make great stuff.
+          </h2>
+
+          <div class="menu-line"></div>
+
+          <a href="mailto:hello@mdx.so" class="menu-email">
+            <span class="menu-mail-icon">✉</span>
+            <span>hr@qirotec.com</span>
+          </a>
+
+          <a href="#" class="menu-talk-btn">
+            LET'S TALK <span>↗</span>
+          </a>
         </div>
 
-        <h2 class="menu-title">
-          Tell us about your project. <br>
-          Let’s collaborate and make great stuff.
-        </h2>
+        <!-- CENTER -->
+        <div class="menu-col">
+          <div class="menu-col-title">NAVIGATION</div>
 
-        <div class="menu-line"></div>
-
-        <a href="mailto:hello@mdx.so" class="menu-email">
-          <span class="menu-mail-icon">✉</span>
-          <span>hr@qirotec.com</span>
-        </a>
-
-        <a href="#" class="menu-talk-btn">
-          LET'S TALK <span>↗</span>
-        </a>
-      </div>
-
-      <!-- CENTER -->
-      <div class="menu-col">
-        <div class="menu-col-title">NAVIGATION</div>
-
-        <a href="index.html" class="menu-link active">Home</a>
-        <a href="about.html" class="menu-link">About Us</a>
-        <a href="services.html" class="menu-link">Services</a>
-        <a href="carrer.html" class="menu-link">Carrer</a>
+          <a href="index.html" class="menu-link active">Home</a>
+          <a href="about.html" class="menu-link">About Us</a>
+          <a href="services.html" class="menu-link">Services</a>
+          <a href="carrer.html" class="menu-link">Carrer</a>
           <a href="contact.html" class="menu-link ">Let's Talk</a>
-      
-      </div>
 
-      <!-- RIGHT -->
-      <div class="menu-col">
-        <div class="menu-col-title">SERVICES</div>
+        </div>
 
-        <a href="uiux-design.html" class="menu-link muted">UI/UX Design</a>
-        <a href="Web-development.html" class="menu-link muted">Web Development Maintenance & Support</a>
-        <a href="Mobile_applications.html" class="menu-link muted">Mobile Applications Maintenance & Support</a>
-        
-        <a href="AIML.html" class="menu-link muted">AI-ML Solutions or IOT Applications</a>
-        <a href="SEO.html" class="menu-link muted">SEO Services</a>
+        <!-- RIGHT -->
+        <div class="menu-col">
+          <div class="menu-col-title">SERVICES</div>
 
-        <!-- <div class="menu-col-title menu-col-title-space">SPONSOR</div>
+          <a href="uiux-design.html" class="menu-link muted">UI/UX Design</a>
+          <a href="Web-development.html" class="menu-link muted">Web Development Maintenance & Support</a>
+          <a href="Mobile_applications.html" class="menu-link muted">Mobile Applications Maintenance & Support</a>
+
+          <a href="AIML.html" class="menu-link muted">AI-ML Solutions or IOT Applications</a>
+          <a href="SEO.html" class="menu-link muted">SEO Services</a>
+
+          <!-- <div class="menu-col-title menu-col-title-space">SPONSOR</div>
         <a href="#" class="menu-link muted">Brand Deals</a> -->
-      </div> 
-    </div>
-
-    <div class="menu-bottom">
-      <div class="menu-copy">© 2026 MDX. All rights reserved.</div>
-
-      <div class="menu-socials">
-        <a href="#">♪</a>
-        <a href="#">◎</a>
-        <a href="#">X</a>
-        <a href="#">f</a>
-        <a href="#">▶</a>
-        <a href="#">in</a>
+        </div>
       </div>
 
-      <div class="menu-policies">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms Of Use</a>
-      </div>
-    </div>
+      <div class="menu-bottom">
+        <div class="menu-copy">© 2026 MDX. All rights reserved.</div>
 
+        <div class="menu-socials">
+          <a href="#">♪</a>
+          <a href="#">◎</a>
+          <a href="#">X</a>
+          <a href="#">f</a>
+          <a href="#">▶</a>
+          <a href="#">in</a>
+        </div>
+
+        <div class="menu-policies">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms Of Use</a>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
 
-<!-- ============================hero-section====================== -->
- <section class="hero reveal-up">
-  <div class="hero-noise"> </div>
-  <div class="hero-inner">
-    <!-- =====left-content====== -->
-     <div class="hero-left reveal-left">
-      <h1>Powerful digital solutions <br> for modern businesses.</h1>
+  <!-- ============================hero-section====================== -->
+  <section class="hero reveal-up">
+    <div class="hero-noise"> </div>
+    <div class="hero-inner">
+      <!-- =====left-content====== -->
+      <div class="hero-left reveal-left">
+        <h1>Powerful digital solutions <br> for modern businesses.</h1>
         <p>
-          
-        QiroTech is a creative technology company specializing in
-  website design, web development, branding, and digital marketing.
-  We build modern digital experiences that help businesses grow,
-  connect, and stand out online.
+
+          QiroTech is a creative technology company specializing in
+          website design, web development, branding, and digital marketing.
+          We build modern digital experiences that help businesses grow,
+          connect, and stand out online.
         </p>
         <a href="#" class="cta-btn">
           LET’S TALK <span>↗</span>
         </a>
-     </div>
+      </div>
 
       <!-- Center animated orb -->
-     <div class="hero-center reveal-up">
-      <div class="orb-stage" id="orbStage">
-        <div class="orb-aura"></div>
-        <div class="orb-shell" id="orbShell">
-          <img src="img/laptop.png" class="brain-img" alt="brain">
+      <div class="hero-center reveal-up">
+        <div class="orb-stage" id="orbStage">
+          <div class="orb-aura"></div>
+          <div class="orb-shell" id="orbShell">
+            <img src="img/laptop.png" class="brain-img" alt="brain">
+          </div>
+          <div class="orb-floor-shadow" id="orbShadow"></div>
         </div>
-        <div class="orb-floor-shadow" id="orbShadow"></div>
       </div>
-     </div>
 
-     <!-- Right content -->
+      <!-- Right content -->
       <div class="hero-right reveal-right">
         <p>
           <strong>Whether through modern design, powerful development, or strategic digital marketing,
-          we create impactful experiences that help brands connect, engage, and grow.
+            we create impactful experiences that help brands connect, engage, and grow.
         </p>
 
         <div class="pills">
@@ -175,409 +176,458 @@
         </div>
       </div>
 
-  </div>
- </section>
+    </div>
+  </section>
 
- <!-- ======Next-section=========== -->
- <section class="hero-section">
+  <!-- ======Next-section=========== -->
+  <section class="hero-section">
     <div class="aura-container">
       <div class="aura-circle yellow-aura"></div>
-        <div class="aura-circle orange-aura"></div>
-        
-        
+      <div class="aura-circle orange-aura"></div>
+
+
     </div>
 
     <div class="hero-content reveal-up">
-        <h1 class="hero-heading">Every <Strong>Experience</Strong>  <br> Begins  With Innovation</h1>
-        <p class="hero-subheading">We blend creativity, technology, and strategy to craft powerful digital experiences that help brands grow, engage audiences, and stand out in the modern world.</p>
-        <a href="about.html" class="hero-button">
-            ABOUT US
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-        </a>
+      <h1 class="hero-heading">Every <Strong>Experience</Strong> <br> Begins With Innovation</h1>
+      <p class="hero-subheading">We blend creativity, technology, and strategy to craft powerful digital experiences
+        that help brands grow, engage audiences, and stand out in the modern world.</p>
+      <a href="about.html" class="hero-button">
+        ABOUT US
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
     </div>
-</section>
+  </section>
 
 
 
-<!-- ============================
+  <!-- ============================
  ideas section 
 ============================   -->
-<section class="ideas-section">
-  <div class="ideas-bg-circle reveal-up"></div>
-  <div class="ideas-bg-glow"></div>
+  <section class="ideas-section">
+    <div class="ideas-bg-circle reveal-up"></div>
+    <div class="ideas-bg-glow"></div>
 
-  <div class="ideas-content ">
-    <h2 class="ideas-title">
-      Building <span>Digital</span><br>
-      Experiences That Matter
-    </h2>
-
-    <p class="ideas-text">
-      We combine creativity, technology, and innovation to design
-      impactful digital products that <br> <span>elevate brands and deliver
-      meaningful user experiences.</span>
-    </p>
-  </div>
-</section>
-
-<!-- ================= video ================= -->
-<section class="showreel-wrap">
-
-  <div class="showreel-card" id="showreelCard">
-
-    <video autoplay loop muted playsinline class="bg-video">
-      <source src="img/video.mp4.mp4" type="video/mp4">
-    </video>
-
-    <div class="video-overlay"></div>
-
-    <div class="top-info">
-      <div class="brand-logo">DRIP</div>
-
-      <div class="charging-info">
-        <span class="label">Charging Type</span>
-        <span class="value">USB-C</span>
-      </div>
-    </div>
-
-    <div class="play-action-center">
-      <svg class="play-icon" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M6.5 5.5V18.5L19 12L6.5 5.5Z"
-          stroke="white"
-          stroke-width="1.5"
-          fill="transparent"
-          stroke-linejoin="round"
-          stroke-linecap="round"
-        />
-      </svg>
-
-      <span class="divider">|</span>
-
-      <span class="action-text">
-        WATCH SHOWREEL
-      </span>
-    </div>
-
-  </div>
-
-</section>
-<!-- =================================================== -->
-<section class="build-stack-wrap">
-
-  <section class="build-stack-section" id="buildStackSection">
-
-    <!-- TOP TEXT -->
-    <div class="build-top-content reveal-left">
-      <h3>
-        Made with Intention.<br>
-        Meant to Be <span>Felt.</span>
-      </h3>
-    </div>
-
-    <div class="build-top-para reveal-right">
-      <p>
-        From the way words breathe to how animations flow,
-        every part is made to resonate.
-      </p>
-    </div>
-
-    <!-- CENTER -->
-    <div class="build-blob-wrap">
-
-      <div class="build-blob-glow reveal-up"></div>
-      <div class="build-blob"></div>
-
-      <div class="build-pill pill-ui reveal-left">
-        Web Development
-      </div>
-
-      <div class="build-pill pill-dev reveal-right">
-        Mobile & Web App
-      </div>
-
-      <div class="build-pill pill-brand reveal-left">
-        UI / UX
-      </div>
-
-      <div class="build-pill pill-anim reveal-right">
-        SEO Services
-      </div>
-
-    </div>
-
-    <!-- BIG TITLE -->
-    <div class="build-content ">
-
-      <h2>
-        We Build <span>Experiences</span><br>
-        That Breathe
+    <div class="ideas-content ">
+      <h2 class="ideas-title">
+        Building <span>Digital</span><br>
+        Experiences That Matter
       </h2>
 
-      <p>
-        Because lasting experiences aren't made by chance —
-        <span>they're shaped with purpose.</span>
+      <p class="ideas-text">
+        We combine creativity, technology, and innovation to design
+        impactful digital products that <br> <span>elevate brands and deliver
+          meaningful user experiences.</span>
       </p>
+    </div>
+  </section>
+
+  <!-- ================= video ================= -->
+  <section class="showreel-wrap ">
+
+    <div class="showreel-card dark-section" id="showreelCard">
+
+      <video autoplay loop muted playsinline class="bg-video ">
+        <source src="img/video.mp4.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-overlay"></div>
+
+      <div class="top-info">
+        <div class="brand-logo">DRIP</div>
+
+        <div class="charging-info">
+          <span class="label">Charging Type</span>
+          <span class="value">USB-C</span>
+        </div>
+      </div>
+
+      <div class="play-action-center">
+        <svg class="play-icon" viewBox="0 0 24 24" fill="none">
+          <path d="M6.5 5.5V18.5L19 12L6.5 5.5Z" stroke="white" stroke-width="1.5" fill="transparent"
+            stroke-linejoin="round" stroke-linecap="round" />
+        </svg>
+
+        <span class="divider">|</span>
+
+        <span class="action-text">
+          WATCH SHOWREEL
+        </span>
+      </div>
 
     </div>
 
   </section>
+  <!-- =================================================== -->
+  <section class="build-stack-wrap">
 
-</section>
+    <section class="build-stack-section" id="buildStackSection">
 
-<!-- ========================
+      <!-- TOP TEXT -->
+      <div class="build-top-content reveal-left">
+        <h3>
+          Made with Intention.<br>
+          Meant to Be <span>Felt.</span>
+        </h3>
+      </div>
+
+      <div class="build-top-para reveal-right">
+        <p>
+          From the way words breathe to how animations flow,
+          every part is made to resonate.
+        </p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="build-blob-wrap">
+
+        <div class="build-blob-glow reveal-up"></div>
+        <div class="build-blob"></div>
+
+        <div class="build-pill pill-ui reveal-left">
+          Web Development
+        </div>
+
+        <div class="build-pill pill-dev reveal-right">
+          Mobile & Web App
+        </div>
+
+        <div class="build-pill pill-brand reveal-left">
+          UI / UX
+        </div>
+
+        <div class="build-pill pill-anim reveal-right">
+          SEO Services
+        </div>
+
+      </div>
+
+      <!-- BIG TITLE -->
+      <div class="build-content ">
+
+        <h2>
+          We Build <span>Experiences</span><br>
+          That Breathe
+        </h2>
+
+        <p>
+          Because lasting experiences aren't made by chance —
+          <span>they're shaped with purpose.</span>
+        </p>
+
+      </div>
+
+    </section>
+
+  </section>
+
+  <!-- ========================
 showcase Section
 ======================== -->
-<section class="showcase-section ">
-  <div class="showcase-top">
-    <h2 class="showcase-title reveal-up">Digital Solutions Crafted For Growth.</h2>
+  <section class="showcase-section dark-section">
+    <div class="showcase-top">
+      <h2 class="showcase-title reveal-up">Digital Solutions Crafted For Growth.</h2>
 
-    <a href="#" class="showcase-viewall reveal-up">
-      <span>VIEW ALL</span>
-      <span class="showcase-viewall-icon">↗</span>
-    </a>
-  </div>
-
-  <div class="showcase-filters reveal-up">
-    <button class="filter-btn active">ALL</button>
-    <button class="filter-btn">DEVELOPMENT</button>
-    <button class="filter-btn">UI-UX</button>
-    <button class="filter-btn">MOBILE APPLICATIONS</button>
-    <button class="filter-btn">SEO SERVICES</button>
-  </div>
-
-  <div class="showcase-grid reveal-up">
-
-    <!-- PROJECT 1 -->
-    <article class="showcase-card reveal-up">
-      <div class="showcase-thumb">
-        <!-- <img src="imG/WEB-DEVELOPMENT.png" alt="Business website project"> -->
-        <img src="img/web.jpeg" alt="Business website project">
-      </div>
-
-      <div class="showcase-meta reveal-up">Web Development </div>
-
-      <a href="Web-development.html" class="showcase-card-title reveal-up">
-    Smart Web Development Services <span>↗</span>
-      </a>
-    </article>
-
-    <!-- PROJECT 2 -->
-    <article class="showcase-card reveal-up" >
-      <div class="showcase-thumb">
-        <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
-      </div>
-
-      <div class="showcase-meta reveal-up">UI/UX </div>
-
-      <a href="uiux-design.html" class="showcase-card-title reveal-up">
-       Smart Designs for Better Experiences <span>↗</span>
-      </a>
-    </article>
-
-  </div>
-</section>
-
-<section class="portfolio-dark-section">
-  <div class="portfolio-dark-grid">
-
-    <!-- PROJECT 3 -->
-    <article class="portfolio-dark-card reveal-up">
-      <div class="portfolio-dark-thumb">
-        <img src="https://blog.vsoftconsulting.com/hubfs/blog-files/Comparing%20Different%20Types%20of%20Mobile%20Application%20Development.jpg" alt="SaaS dashboard project">
-      </div>
-
-      <div class="portfolio-dark-meta reveal-up">Development/ Mobile app</div>
-
-      <a href="Mobile_applications.html" class="portfolio-dark-title reveal-up">
-       Mobile application  <span>↗</span>
-      </a>
-    </article>
-
-    <!-- PROJECT 4 -->
-    <article class="portfolio-dark-card reveal-up">
-      <div class="portfolio-dark-thumb reveal-up">
-        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231117175150/marketing-landing-page.webp" alt="Marketing agency project">
-      </div>
-
-      <div class="portfolio-dark-meta reveal-up">SEO / MARKETING / DEVELOPMENT</div>
-
-      <a href="SEO.html" class="portfolio-dark-title reveal-up">
-       Strategic Marketing Services <span>↗</span>
-      </a>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- ===== Contact section ===== -->
-
-<section class="contact-mdx-section ">
-  <div class="contact-mdx-left reveal-up">
-    <div>
-      <div class="contact-mdx-kicker reveal-up">
-        <span class="dot"></span>
-        <span>Connect with us!</span>
-      </div>
-
-      <h2 class="contact-mdx-title reveal-up">
-        Build Digital Experiences<br>
-        That Inspire, Engage<br>
-        and Grow
-      </h2>
-
-      <div class="contact-mdx-line reveal-up"></div>
-
-      <a href="mailto:hello@mdx.so" class="contact-mdx-mail reveal-up">
-        <span class="mail-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <rect x="3" y="5" width="18" height="14" rx="3"></rect>
-            <path d="M4 7l8 6 8-6"></path>
-          </svg>
-        </span>
-      hr@qirotec.com
-      </a>
+      
     </div>
 
-    <div class="contact-mdx-socials reveal-up">
-      <a href="#" aria-label="TikTok">♪</a>
-      <a href="#" aria-label="Instagram">◎</a>
-      <a href="#" aria-label="X">X</a>
-      <a href="#" aria-label="Facebook">f</a>
-      <a href="#" aria-label="YouTube">▶</a>
-      <a href="#" aria-label="LinkedIn">in</a>
+    <div class="showcase-filters reveal-up">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="development">DEVELOPMENT</button>
+      <button class="filter-btn" data-filter="uiux">UI-UX</button>
+      <button class="filter-btn" data-filter="mobile">MOBILE APPLICATIONS</button>
+      <button class="filter-btn" data-filter="seo">SEO SERVICES</button>
     </div>
-  </div>
 
-  <div class="contact-mdx-right reveal-up">
-    <h3 class="contact-mdx-form-title">Let’s talk</h3>
+    <div class="showcase-grid reveal-up ">
 
-    <form class="contact-mdx-form" id="contactMdxForm">
-      <div class="contact-mdx-grid">
-        <div class="field">
-          <input type="text" id="fullName" name="fullName" placeholder=" " required>
-          <label for="fullName">Full name</label>
+      <!-- PROJECT 1 -->
+      <article class="showcase-card reveal-up"  data-category="development">
+        <div class="showcase-thumb">
+          <img src="img/web.jpeg" alt="Business website project">
         </div>
 
-        <div class="field">
-          <input type="text" id="company" name="company" placeholder=" ">
-          <label for="company">Company</label>
+        <div class="showcase-meta reveal-up">Web Development </div>
+
+        <a href="Web-development.html" class="showcase-card-title reveal-up">
+          Smart Web Development Services <span>↗</span>
+        </a>
+      </article>
+
+      <article class="showcase-card reveal-up  extra-project"  data-category="development">
+        <div class="showcase-thumb">
+          <img src="img/web.jpeg" alt="Business website project">
         </div>
 
-        <div class="field">
-          <input type="email" id="email" name="email" placeholder=" " required>
-          <label for="email">Email</label>
+        <div class="showcase-meta reveal-up">Web Development </div>
+
+        <a href="Web-development.html" class="showcase-card-title reveal-up">
+          Smart Web Development Services <span>↗</span>
+        </a>
+      </article>
+      
+
+      <!-- PROJECT 2 -->
+      <article class="showcase-card reveal-up" data-category="uiux">
+        <div class="showcase-thumb">
+          <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
         </div>
 
-        <div class="field">
-          <input type="tel" id="phone" name="phone" placeholder=" ">
-          <label for="phone">Phone</label>
+        <div class="showcase-meta reveal-up">UI/UX </div>
+
+        <a href="uiux-design.html" class="showcase-card-title reveal-up">
+          Smart Designs for Better Experiences <span>↗</span>
+        </a>
+      </article>
+
+        <article class="showcase-card reveal-up  extra-project" data-category="uiux">
+        <div class="showcase-thumb">
+          <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
         </div>
+
+        <div class="showcase-meta reveal-up">UI/UX </div>
+
+        <a href="uiux-design.html" class="showcase-card-title reveal-up">
+          Smart Designs for Better Experiences <span>↗</span>
+        </a>
+      </article>
+
+       <!-- PROJECT 3 -->
+         <article class="showcase-card reveal-up" data-category="mobile">
+        <div class="showcase-thumb">
+          <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
+        </div>
+
+        <div class="showcase-meta reveal-up">UI/UX </div>
+
+        <a href="uiux-design.html" class="showcase-card-title reveal-up">
+          Smart Designs for Better Experiences <span>↗</span>
+        </a>
+      </article>
+
+       <article class="showcase-card reveal-up  extra-project" data-category="mobile">
+        <div class="showcase-thumb">
+          <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
+        </div>
+
+        <div class="showcase-meta reveal-up">UI/UX </div>
+
+        <a href="uiux-design.html" class="showcase-card-title reveal-up">
+          Smart Designs for Better Experiences <span>↗</span>
+        </a>
+      </article>
+
+        <!-- PROJECT 4 -->
+         <article class="showcase-card reveal-up" data-category="seo">
+        <div class="showcase-thumb">
+          <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
+        </div>
+
+        <div class="showcase-meta reveal-up">UI/UX </div>
+
+        <a href="uiux-design.html" class="showcase-card-title reveal-up">
+          Smart Designs for Better Experiences <span>↗</span>
+        </a>
+      </article>
+
+       <article class="showcase-card reveal-up  extra-project" data-category="seo">
+        <div class="showcase-thumb">
+          <img src="img/UI_and_UX_Design.webp" alt="Ecommerce project">
+        </div>
+
+        <div class="showcase-meta reveal-up">UI/UX </div>
+
+        <a href="uiux-design.html" class="showcase-card-title reveal-up">
+          Smart Designs for Better Experiences <span>↗</span>
+        </a>
+      </article>
+
+      
+
+  
+    </div>
+
+     <div class="showcase-bottom">
+            <a href="#" class="showcase-viewall reveal-up" id="viewAllBtn">
+                <span>VIEW ALL</span>
+                <span class="showcase-viewall-icon">↗</span>
+             </a>
+         </div>
+     
+  </section>
+
+
+  <!-- ===== Contact section ===== -->
+
+  <section class="contact-mdx-section ">
+    <div class="contact-mdx-left reveal-up">
+      <div>
+        <div class="contact-mdx-kicker reveal-up">
+          <span class="dot"></span>
+          <span>Connect with us!</span>
+        </div>
+
+        <h2 class="contact-mdx-title reveal-up">
+          Build Digital Experiences<br>
+          That Inspire, Engage<br>
+          and Grow
+        </h2>
+
+        <div class="contact-mdx-line reveal-up"></div>
+
+        <a href="mailto:hello@mdx.so" class="contact-mdx-mail reveal-up">
+          <span class="mail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+              <path d="M4 7l8 6 8-6"></path>
+            </svg>
+          </span>
+          hr@qirotec.com
+        </a>
       </div>
 
-      <div class="interest-wrap">
-        <div class="interest-label">I'm Interested on</div>
+      <div class="contact-mdx-socials reveal-up">
+        <a href="#" aria-label="TikTok">♪</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
 
-        <div class="interest-options reveal-up">
-          <label class="interest-chip ">
-            <input type="radio" name="interest" value="UI/UX" checked>
-            <span>UI/UX</span>
-          </label>
+    <div class="contact-mdx-right reveal-up">
+      <h3 class="contact-mdx-form-title">Let’s talk</h3>
 
-          <label class="interest-chip">
-            <input type="radio" name="interest" value="Development">
-            <span>Web Development</span>
-          </label>
+      <form class="contact-mdx-form" id="contactMdxForm">
+        <div class="contact-mdx-grid">
+          <div class="field">
+            <input type="text" id="fullName" name="fullName" placeholder=" " required>
+            <label for="fullName">Full name</label>
+          </div>
 
-          <label class="interest-chip">
-            <input type="radio" name="interest" value="Branding">
-            <span>Seo Services</span>
-          </label>
+          <div class="field">
+            <input type="text" id="company" name="company" placeholder=" ">
+            <label for="company">Company</label>
+          </div>
 
-          <label class="interest-chip">
-            <input type="radio" name="interest" value="3D Animation">
-            <span>Mobile Application</span>
-          </label>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email</label>
+          </div>
+
+          <div class="field">
+            <input type="tel" id="phone" name="phone" placeholder=" ">
+            <label for="phone">Phone</label>
+          </div>
         </div>
+
+        <div class="interest-wrap">
+          <div class="interest-label">I'm Interested on</div>
+
+          <div class="interest-options reveal-up">
+            <label class="interest-chip ">
+              <input type="radio" name="interest" value="UI/UX" checked>
+              <span>UI/UX</span>
+            </label>
+
+            <label class="interest-chip">
+              <input type="radio" name="interest" value="Development">
+              <span>Web Development</span>
+            </label>
+
+            <label class="interest-chip">
+              <input type="radio" name="interest" value="Branding">
+              <span>Seo Services</span>
+            </label>
+
+            <label class="interest-chip">
+              <input type="radio" name="interest" value="3D Animation">
+              <span>Mobile Application</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field field-textarea reveal-up">
+          <textarea id="projectDetails" name="projectDetails" placeholder=" " rows="4"></textarea>
+          <label for="projectDetails">Tell us more about your project!</label>
+        </div>
+
+        <button type="submit" class="contact-mdx-submit reveal-up">
+          <span>SEND</span>
+          <span class="arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </section>
+  <!-- ==================Footer========================================= -->
+  <section class="footer-mdx dark-section">
+    <div class="footer-mdx-top">
+      <div class="footer-mdx-left">
+        <h2 class="footer-mdx-heading">
+          Is there a fascinating<br>
+          project <span>brewing in</span><br>
+          <span>your mind?</span>
+        </h2>
+
+        <a href="mailto:hr@qirotec.com" class="footer-mdx-email">
+          <span class="footer-mdx-email-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M21.6 4.2a2.2 2.2 0 0 0-2.3-.3L3.8 11.1a2 2 0 0 0 .1 3.7l4.3 1.7 1.7 4.3a2 2 0 0 0 1.8 1.2h.1a2 2 0 0 0 1.8-1.1l7.3-15.6a2.2 2.2 0 0 0-.3-2.1ZM10.2 15.8l-.9-2.4 7.5-6.4-6.4 7.6Z" />
+            </svg>
+          </span>
+          <span>hr@qirotec.com</span>
+        </a>
       </div>
 
-      <div class="field field-textarea reveal-up">
-        <textarea id="projectDetails" name="projectDetails" placeholder=" " rows="4"></textarea>
-        <label for="projectDetails">Tell us more about your project!</label>
+      <nav class="footer-mdx-nav">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+
+      </nav>
+    </div>
+
+    <div class="footer-mdx-divider"></div>
+
+    <div class="footer-mdx-logo-row">
+      <div class="footer-mdx-logo footer-mdx-logo-Q">Q</div>
+      <div class="footer-mdx-logo footer-mdx-logo-I">I</div>
+      <div class="footer-mdx-logo footer-mdx-logo-R">R</div>
+      <div class="footer-mdx-logo footer-mdx-logo-O">O</div>
+    </div>
+
+    <div class="footer-mdx-bottom">
+      <div class="footer-mdx-socials">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="TikTok">♪</a>
       </div>
 
-      <button type="submit" class="contact-mdx-submit reveal-up">
-        <span>SEND</span>
-        <span class="arrow">→</span>
-      </button>
-    </form>
-  </div>
-</section>
-<!-- ==================Footer========================================= -->
-<section class="footer-mdx">
-  <div class="footer-mdx-top">
-    <div class="footer-mdx-left">
-      <h2 class="footer-mdx-heading">
-        Is there a fascinating<br>
-        project <span>brewing in</span><br>
-        <span>your mind?</span>
-      </h2>
+      <div class="footer-mdx-meta">
+        <span>© QIRO TECH INNOVATION PVT. LTD. All rights reserved</span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
 
-      <a href="mailto:hr@qirotec.com" class="footer-mdx-email">
-        <span class="footer-mdx-email-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M21.6 4.2a2.2 2.2 0 0 0-2.3-.3L3.8 11.1a2 2 0 0 0 .1 3.7l4.3 1.7 1.7 4.3a2 2 0 0 0 1.8 1.2h.1a2 2 0 0 0 1.8-1.1l7.3-15.6a2.2 2.2 0 0 0-.3-2.1ZM10.2 15.8l-.9-2.4 7.5-6.4-6.4 7.6Z"/>
-          </svg>
-        </span>
-        <span>hr@qirotec.com</span>
+      <a href="#" class="footer-mdx-scrolltop">
+        <span>SCROLL TOP</span>
+        <span class="footer-mdx-scrolltop-icon">⌃</span>
       </a>
     </div>
-
-    <nav class="footer-mdx-nav">
-      <a href="about.html">About Us</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact Us</a>
- 
-    </nav>
-  </div>
-
-  <div class="footer-mdx-divider"></div>
-
-  <div class="footer-mdx-logo-row">
-    <div class="footer-mdx-logo footer-mdx-logo-Q">Q</div>
-    <div class="footer-mdx-logo footer-mdx-logo-I">I</div>
-    <div class="footer-mdx-logo footer-mdx-logo-R">R</div>
-       <div class="footer-mdx-logo footer-mdx-logo-O">O</div>
-  </div>
-
-  <div class="footer-mdx-bottom">
-    <div class="footer-mdx-socials">
-      <a href="#" aria-label="Facebook">f</a>
-      <a href="#" aria-label="YouTube">▶</a>
-      <a href="#" aria-label="LinkedIn">in</a>
-      <a href="#" aria-label="X">X</a>
-      <a href="#" aria-label="TikTok">♪</a>
-    </div>
-
-    <div class="footer-mdx-meta">
-      <span>© QIRO TECH INNOVATION PVT. LTD. All rights reserved</span>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms &amp; Conditions</a>
-    </div>
-
-    <a href="#" class="footer-mdx-scrolltop">
-      <span>SCROLL TOP</span>
-      <span class="footer-mdx-scrolltop-icon">⌃</span>
-    </a>
-  </div>
-</section>
+  </section>
 
 
 
-<script src="script.js"></script>  
+  <script src="script.js"></script>
+  <script src="footer.js"></script>
 </body>
+
 </html>

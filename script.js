@@ -1,3 +1,47 @@
+// ===================================================
+// Navbar gkasmorphism effect when scroll
+// ================================================
+const updatednavbar = document.querySelector(".topbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    updatednavbar.classList.add("scrolled");
+  } else {
+    updatednavbar.classList.remove("scrolled");
+  }
+});
+
+// ===================================================
+// Navbar Colour Change Black and White
+// ===================================================
+
+const navbar = document.querySelector(".topbar");
+const darkSections = document.querySelectorAll(".dark-section");
+
+function updateNavbarColor() {
+  const navbarHeight = navbar.offsetHeight;
+
+  // navbar च्या middle point ची position
+  const checkPoint = navbarHeight / 2;
+
+  let isDark = false;
+
+  darkSections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top <= checkPoint && rect.bottom >= checkPoint) {
+      isDark = true;
+    }
+  });
+
+  navbar.classList.toggle("dark-nav", isDark);
+}
+
+window.addEventListener("scroll", updateNavbarColor);
+window.addEventListener("resize", updateNavbarColor);
+
+updateNavbarColor();
+
 // ===========================================
 // Circle technology Animation
 // ===========================================
@@ -213,20 +257,80 @@ window.addEventListener("mousemove", animateOrbOnMouse);
 // =========================
 // FILTER BUTTONS
 // =========================
+// =========================
+// FILTER BUTTONS
+// =========================
 
 const filterButtons = document.querySelectorAll(".filter-btn");
+const allProjects = document.querySelectorAll(".showcase-card");
 
 function initFilterButtons() {
   if (!filterButtons.length) return;
 
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
+      // Active button
       filterButtons.forEach((item) => item.classList.remove("active"));
-
       btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      // ALL
+      if (filter === "all") {
+        allProjects.forEach((project) => {
+          if (project.classList.contains("extra-project")) {
+            project.style.display = "none";
+          } else {
+            project.style.display = "flex";
+          }
+        });
+
+        isOpen = false;
+        viewAllBtn.innerHTML = `
+          <span>VIEW ALL</span>
+          <span class="showcase-viewall-icon">↗</span>
+        `;
+
+        document.querySelector(".showcase-bottom").style.display = "block";
+      }
+
+      // Specific Category
+      else {
+        allProjects.forEach((project) => {
+          if (project.dataset.category === filter) {
+            project.style.display = "flex";
+          } else {
+            project.style.display = "none";
+          }
+        });
+
+        // Hide View All button
+        document.querySelector(".showcase-bottom").style.display = "none";
+      }
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", initFilterButtons);
+// =========================
+// View All Projects
+// =========================
+const viewAllBtn = document.getElementById("viewAllBtn");
+const extraProjects = document.querySelectorAll(".extra-project");
+
+let isOpen = false;
+
+viewAllBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  isOpen = !isOpen;
+
+  extraProjects.forEach((project) => {
+    project.style.display = isOpen ? "flex" : "none";
+  });
+
+  viewAllBtn.textContent = isOpen ? "SHOW LESS" : "VIEW ALL PROJECTS";
+});
 
 document.addEventListener("DOMContentLoaded", initFilterButtons);
 
@@ -250,34 +354,6 @@ function initFooterScrollTop() {
 }
 
 document.addEventListener("DOMContentLoaded", initFooterScrollTop);
-
-// =========================
-// FOOTER LOGO ANIMATION
-// =========================
-
-const footerLogos = document.querySelectorAll(".footer-mdx-logo");
-
-const footerSection = document.querySelector(".footer-mdx");
-
-function animateFooterLogos() {
-  if (!footerSection || !footerLogos.length) return;
-
-  const rect = footerSection.getBoundingClientRect();
-
-  const triggerPoint = window.innerHeight * 0.78;
-
-  if (rect.top <= triggerPoint && rect.bottom >= 120) {
-    footerLogos.forEach((logo) => logo.classList.add("show"));
-  } else {
-    footerLogos.forEach((logo) => logo.classList.remove("show"));
-  }
-}
-
-window.addEventListener("scroll", animateFooterLogos, { passive: true });
-
-window.addEventListener("resize", animateFooterLogos);
-
-window.addEventListener("load", animateFooterLogos);
 
 // =====================================================================================
 // HERO NEXT SECTION SCROLL ANIMATION
