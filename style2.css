@@ -1583,7 +1583,7 @@ Hero-next
 
   border-radius: 50%;
 
-  filter: blur(90px);
+  filter: blur(140px);
 
   opacity: .95;
 
@@ -1600,12 +1600,12 @@ Hero-next
 
   background:
     radial-gradient(circle,
-      rgba(61, 165, 179, 0.95) 0%,
+      rgba(245, 254, 255, 0.95) 0%,
       rgba(54, 155, 152, 0.62) 32%,
       rgba(50, 160, 193, 0) 78%);
 
-  top: 12%;
-  left: -10%;
+  bottom: 14%;
+  left: -20%;
 
   transform:
     translateY(var(--auraInnerMove, 0px)) scale(var(--auraInnerScale, 1));
