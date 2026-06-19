@@ -545,6 +545,16 @@ about us section
   margin-top: 0px;
 }
 
+.gsap-reveal-text {
+  line-height: 1.7;
+  white-space: normal;
+}
+
+.gsap-word {
+  display: inline-block;
+  margin-right: 0.25em;
+}
+
 .about-section {
   position: relative;
   width: 100%;
