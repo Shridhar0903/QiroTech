@@ -1,312 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MDX Premium Process Scroll - Exact Match</title>
+<html lang="mr">
 
-<link rel="stylesheet" href="style2.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QiroTech UI - Large Left Content</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f5f4f0;
+      /* प्रतिमेतील ऑफ-व्हाईट रंग */
+      color: #1e2229;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 60px 8%;
+      /* पॅडिंग थोडे वाढवले आहे */
+    }
+
+    .main-content {
+      max-width: 900px;
+      /* मजकुराची रुंदी वाढवली आहे जेणेकरून मोठे अक्षरे व्यवस्थित बसतील */
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      /* घटकांमधील अंतर वाढवले */
+    }
+
+    .main-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 72px;
+      /* हेडिंग मोठे केले (आधी 58px होते) */
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      color: #1a1a1a;
+    }
+
+    .description {
+      font-size: 22px;
+      /* पॅराग्राफ मोठा केला (आधी 18px होते) */
+      line-height: 1.65;
+      color: #2c3038;
+      font-weight: 400;
+    }
+
+    /* Let's Talk बटण (मजकूर मोठा केल्यामुळे बटण देखील थोडे मोठे केले आहे) */
+    .btn-talk {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #2b6166 0%, #356f74 100%);
+      color: white;
+      padding: 18px 42px;
+      /* बटणचे पॅडिंग वाढवले */
+      border-radius: 50px;
+      border: none;
+      font-size: 14px;
+      /* फॉन्ट किंचित मोठा केला */
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(43, 97, 102, 0.35);
+      width: fit-content;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn-talk:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
+    }
+
+    .btn-talk svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* मोबाईल स्क्रीनसाठी रिस्पॉन्सिव्ह सेटिंग्ज */
+    @media (max-width: 768px) {
+      body {
+        padding: 40px 24px;
+      }
+
+      .main-heading {
+        font-size: 46px;
+        /* मोबाईलवर जास्त मोठे दिसू नये म्हणून बॅलन्स केले */
+      }
+
+      .description {
+        font-size: 18px;
+      }
+
+      .btn-talk {
+        padding: 15px 36px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
 
 <body>
-   <!-- ========================
-FILTER BUTTONS
-======================== -->
-<div class="showcase-filters reveal-up">
 
-  <button class="filter-btn active" data-filter="all">
-    ALL
-  </button>
+  <div class="main-content">
+    <h1 class="main-heading">
+      Powerful digital solutions<br>for modern businesses.
+    </h1>
+    <p class="description">
+      QiroTech is a creative technology company specializing in website design, web development, branding, and digital
+      marketing. We build modern digital experiences that help businesses grow, connect, and stand out online.
+    </p>
+    <button class="btn-talk">
+      Let's Talk
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+      </svg>
+    </button>
+  </div>
 
-  <button class="filter-btn" data-filter="development">
-    DEVELOPMENT
-  </button>
-
-  <button class="filter-btn" data-filter="uiux">
-    UI / UX
-  </button>
-
-  <button class="filter-btn" data-filter="mobile">
-    MOBILE APPLICATIONS
-  </button>
-
-  <button class="filter-btn" data-filter="seo">
-    SEO SERVICES
-  </button>
-
-</div>
-
-<!-- ========================
-PROJECT GRID
-======================== -->
-<div class="projects-grid">
-
-  <!-- ========================
-  DEVELOPMENT 1 (ALL मध्ये दिसेल)
-  ======================== -->
-  <article class="project-card default-card reveal-up"
-           data-category="development">
-
-    <div class="showcase-thumb">
-      <img src="img/web.jpeg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      Web Development
-    </div>
-
-    <a href="Web-development.html"
-       class="showcase-card-title">
-
-      Smart Web Development Services
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  DEVELOPMENT 2
-  ======================== -->
-  <article class="project-card reveal-up"
-           data-category="development">
-
-    <div class="showcase-thumb">
-      <img src="img/business-website.jpg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      Web Development
-    </div>
-
-    <a href="#"
-       class="showcase-card-title">
-
-      Enterprise Business Website
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  UI UX 1 (ALL मध्ये दिसेल)
-  ======================== -->
-  <article class="project-card default-card reveal-up"
-           data-category="uiux">
-
-    <div class="showcase-thumb">
-      <img src="img/UI_and_UX_Design.webp" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      UI / UX Design
-    </div>
-
-    <a href="uiux-design.html"
-       class="showcase-card-title">
-
-      Smart Designs For Better Experiences
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  UI UX 2
-  ======================== -->
-  <article class="project-card reveal-up"
-           data-category="uiux">
-
-    <div class="showcase-thumb">
-      <img src="img/uiux2.jpg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      UI / UX Design
-    </div>
-
-    <a href="#"
-       class="showcase-card-title">
-
-      Product UX Strategy
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  MOBILE 1 (ALL मध्ये दिसेल)
-  ======================== -->
-  <article class="project-card default-card reveal-up"
-           data-category="mobile">
-
-    <div class="showcase-thumb">
-      <img src="img/mobile-app.jpg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      Mobile Applications
-    </div>
-
-    <a href="Mobile_applications.html"
-       class="showcase-card-title">
-
-      Mobile Application Development
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  MOBILE 2
-  ======================== -->
-  <article class="project-card reveal-up"
-           data-category="mobile">
-
-    <div class="showcase-thumb">
-      <img src="img/mobile-app2.jpg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      Mobile Applications
-    </div>
-
-    <a href="#"
-       class="showcase-card-title">
-
-      On Demand Delivery App
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  SEO 1 (ALL मध्ये दिसेल)
-  ======================== -->
-  <article class="project-card default-card reveal-up"
-           data-category="seo">
-
-    <div class="showcase-thumb">
-      <img src="img/seo.jpg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      SEO Services
-    </div>
-
-    <a href="SEO.html"
-       class="showcase-card-title">
-
-      Strategic Marketing Services
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-  <!-- ========================
-  SEO 2
-  ======================== -->
-  <article class="project-card reveal-up"
-           data-category="seo">
-
-    <div class="showcase-thumb">
-      <img src="img/seo2.jpg" alt="">
-    </div>
-
-    <div class="showcase-meta">
-      SEO Services
-    </div>
-
-    <a href="#"
-       class="showcase-card-title">
-
-      SEO Growth Campaign
-      <span>↗</span>
-
-    </a>
-
-  </article>
-
-</div>
 </body>
-    
-<script>
-    // ======================================
-// PROJECT FILTER
-// ======================================
 
-const filterButtons =
-  document.querySelectorAll(".filter-btn");
-
-const projectCards =
-  document.querySelectorAll(".project-card");
-
-// Initial State
-projectCards.forEach((card) => {
-
-  if (
-    !card.classList.contains("default-card")
-  ) {
-    card.classList.add("hide");
-  }
-
-});
-
-filterButtons.forEach((button) => {
-
-  button.addEventListener("click", () => {
-
-    // active button
-    filterButtons.forEach((btn) =>
-      btn.classList.remove("active")
-    );
-
-    button.classList.add("active");
-
-    const filter =
-      button.dataset.filter;
-
-    projectCards.forEach((card) => {
-
-      const category =
-        card.dataset.category;
-
-      // ALL
-      if(filter === "all"){
-
-        if(
-          card.classList.contains("default-card")
-        ){
-          card.classList.remove("hide");
-        }
-        else{
-          card.classList.add("hide");
-        }
-
-        return;
-      }
-
-      // CATEGORY FILTER
-
-      if(category === filter){
-
-        card.classList.remove("hide");
-
-      }else{
-
-        card.classList.add("hide");
-
-      }
-
-    });
-
-  });
-
-});
-</script>
 </html>
