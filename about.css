@@ -216,6 +216,218 @@ a {
   transition: .35s ease;
 }
 
+/* ==========================================
+   LAPTOP (1200px)
+========================================== */
+@media (max-width:1200px) {
+
+  .About-hero-section {
+    min-height: 90vh;
+    padding: 60px 24px;
+  }
+
+  .About-hero-circle {
+    width: 900px;
+    height: 900px;
+    top: 20%;
+  }
+
+  .About-hero-glow {
+    width: 520px;
+    height: 520px;
+  }
+
+  .About-hero-content {
+    max-width: 1000px;
+  }
+
+  .About-hero-title {
+    font-size: 72px;
+    margin-bottom: 24px;
+  }
+
+  .About-hero-text {
+    max-width: 650px;
+    font-size: 16px;
+  }
+
+}
+
+
+/* ==========================================
+   TABLET (992px)
+========================================== */
+@media (max-width:992px) {
+
+  .About-hero-section {
+    min-height: auto;
+    padding: 70px 24px 60px;
+  }
+
+  .About-hero-circle {
+    width: 760px;
+    height: 760px;
+    top: 18%;
+  }
+
+  .About-hero-glow {
+    width: 450px;
+    height: 450px;
+    filter: blur(55px);
+  }
+
+  .About-hero-title {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+  }
+
+  .About-hero-text {
+    max-width: 600px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .about-cta-btn {
+    margin-top: 26px;
+    padding: 15px 28px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE (768px)
+========================================== */
+@media (max-width:768px) {
+
+  .About-hero-section {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  .About-hero-circle {
+    width: 620px;
+    height: 620px;
+    top: 15%;
+  }
+
+  .About-hero-glow {
+    width: 360px;
+    height: 360px;
+    filter: blur(50px);
+  }
+
+  .About-hero-title {
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .About-hero-text {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .about-cta-btn {
+    margin-top: 22px;
+    padding: 14px 26px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE (480px)
+========================================== */
+@media (max-width:480px) {
+
+  .About-hero-section {
+    min-height: auto;
+    padding: 150px 18px 40px;
+  }
+
+  .About-hero-circle {
+    width: 470px;
+    height: 470px;
+    top: 12%;
+  }
+
+  .About-hero-glow {
+    width: 280px;
+    height: 280px;
+    filter: blur(45px);
+  }
+
+  .About-hero-content {
+    width: 100%;
+  }
+
+  .About-hero-title {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+
+  .About-hero-title br {
+    display: none;
+  }
+
+  .About-hero-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .about-cta-btn {
+    width: 100%;
+    max-width: 220px;
+    justify-content: center;
+    padding: 14px 20px;
+    margin-top: 20px;
+  }
+
+}
+
+
+/* ==========================================
+   EXTRA SMALL (360px)
+========================================== */
+@media (max-width:360px) {
+
+  .About-hero-section {
+    padding: 25px 14px 35px;
+  }
+
+  .About-hero-circle {
+    width: 400px;
+    height: 400px;
+  }
+
+  .About-hero-glow {
+    width: 220px;
+    height: 220px;
+  }
+
+  .About-hero-title {
+    font-size: 28px;
+  }
+
+  .About-hero-text {
+    font-size: 13px;
+  }
+
+  .about-cta-btn {
+    max-width: 200px;
+    padding: 13px 18px;
+    font-size: 12px;
+  }
+
+}
+
 
 /* ===================================================================
 vedio section
