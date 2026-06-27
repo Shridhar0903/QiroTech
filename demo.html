@@ -14,123 +14,62 @@
     rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .footer-mdx-bottom {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 24px;
     }
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #f5f4f0;
-      /* प्रतिमेतील ऑफ-व्हाईट रंग */
-      color: #1e2229;
-      min-height: 100vh;
+    .footer-mdx-socials {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      padding: 60px 8%;
-      /* पॅडिंग थोडे वाढवले आहे */
+      gap: 34px;
     }
 
-    .main-content {
-      max-width: 900px;
-      /* मजकुराची रुंदी वाढवली आहे जेणेकरून मोठे अक्षरे व्यवस्थित बसतील */
+    .footer-mdx-socials a {
       display: flex;
-      flex-direction: column;
-      gap: 36px;
-      /* घटकांमधील अंतर वाढवले */
-    }
-
-    .main-heading {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 72px;
-      /* हेडिंग मोठे केले (आधी 58px होते) */
-      font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -1.5px;
-      color: #1a1a1a;
-    }
-
-    .description {
-      font-size: 22px;
-      /* पॅराग्राफ मोठा केला (आधी 18px होते) */
-      line-height: 1.65;
-      color: #2c3038;
-      font-weight: 400;
-    }
-
-    /* Let's Talk बटण (मजकूर मोठा केल्यामुळे बटण देखील थोडे मोठे केले आहे) */
-    .btn-talk {
-      display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: linear-gradient(135deg, #2b6166 0%, #356f74 100%);
-      color: white;
-      padding: 18px 42px;
-      /* बटणचे पॅडिंग वाढवले */
-      border-radius: 50px;
-      border: none;
-      font-size: 14px;
-      /* फॉन्ट किंचित मोठा केला */
-      font-weight: 600;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
+      justify-content: center;
+
+      width: 45px;
+      height: 45px;
+
+      color: #8f8f92;
+      font-size: 30px;
+      text-decoration: none;
       cursor: pointer;
-      box-shadow: 0 12px 30px rgba(43, 97, 102, 0.35);
-      width: fit-content;
-      transition: transform 0.2s, opacity 0.2s;
+
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .btn-talk:hover {
-      opacity: 0.95;
-      transform: translateY(-2px);
+    .footer-mdx-socials a:hover {
+      color: #ffffff;
+      transform: translateY(-3px);
     }
 
-    .btn-talk svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    /* मोबाईल स्क्रीनसाठी रिस्पॉन्सिव्ह सेटिंग्ज */
-    @media (max-width: 768px) {
-      body {
-        padding: 40px 24px;
-      }
-
-      .main-heading {
-        font-size: 46px;
-        /* मोबाईलवर जास्त मोठे दिसू नये म्हणून बॅलन्स केले */
-      }
-
-      .description {
-        font-size: 18px;
-      }
-
-      .btn-talk {
-        padding: 15px 36px;
-        font-size: 13px;
-      }
+    .footer-mdx-socials a:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 
 <body>
+  <div class="footer-mdx-socials">
 
-  <div class="main-content">
-    <h1 class="main-heading">
-      Powerful digital solutions<br>for modern businesses.
-    </h1>
-    <p class="description">
-      QiroTech is a creative technology company specializing in website design, web development, branding, and digital
-      marketing. We build modern digital experiences that help businesses grow, connect, and stand out online.
-    </p>
-    <button class="btn-talk">
-      Let's Talk
-      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
-      </svg>
-    </button>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
   </div>
 
 </body>
