@@ -146,6 +146,154 @@ a {
   color: #7f8a93;
 }
 
+/* ==========================================================
+   WEB DEVELOPMENT HERO SECTION - RESPONSIVE
+   (Paste below your existing CSS)
+========================================================== */
+
+/* ==========================
+   LAPTOP (1200px)
+========================== */
+@media (max-width:1200px) {
+
+  .webdev-hero-section {
+    min-height: 250px;
+    padding: 28px 32px 20px;
+    margin-top: 50px;
+  }
+
+  .webdev-hero-title {
+    font-size: clamp(68px, 9vw, 120px);
+    letter-spacing: -5px;
+  }
+
+  .webdev-hero-text {
+    margin-top: 28px;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+}
+
+
+/* ==========================
+   TABLET (992px)
+========================== */
+@media (max-width:992px) {
+
+  .webdev-hero-section {
+    min-height: auto;
+    padding: 28px;
+    margin-top: 45px;
+  }
+
+  .webdev-hero-kicker {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .webdev-hero-title {
+    font-size: 60px;
+    letter-spacing: -3px;
+    line-height: .95;
+  }
+
+  .webdev-hero-text {
+    margin-top: 22px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+}
+
+
+/* ==========================
+   MOBILE (768px)
+========================== */
+@media (max-width:768px) {
+
+  .webdev-hero-section {
+    padding: 24px 20px;
+    margin-top: 40px;
+  }
+
+  .webdev-hero-kicker {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .webdev-hero-title {
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .webdev-hero-text {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE (576px)
+========================== */
+@media (max-width:576px) {
+
+  .webdev-hero-section {
+    padding: 20px 16px;
+    margin-top: 30px;
+  }
+
+  .webdev-hero-kicker {
+    font-size: 14px;
+  }
+
+  .webdev-hero-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .webdev-hero-text {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+}
+
+
+/* ==========================
+   EXTRA SMALL (400px)
+========================== */
+@media (max-width:400px) {
+
+  .webdev-hero-section {
+    padding: 50px 14px 20px;
+    margin-top: 50px;
+  }
+
+  .webdev-hero-kicker {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .webdev-hero-title {
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .webdev-hero-text {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+}
+
 /* =========================================
    WEB PURPOSE SECTION
 ========================================= */
@@ -281,6 +429,203 @@ a {
   line-height: 1.12;
 
   font-weight: 300;
+}
+
+
+/* ==========================================================
+   WEB DEVELOPMENT PURPOSE SECTION - RESPONSIVE
+   (Paste below your existing CSS)
+========================================================== */
+
+/* ==========================
+   LAPTOP (1200px)
+========================== */
+@media (max-width:1200px) {
+
+  .webdev-purpose-section {
+    padding: 90px 36px 50px;
+  }
+
+  .webdev-purpose-grid {
+    gap: 30px;
+  }
+
+  .webdev-purpose-title {
+    font-size: clamp(60px, 6vw, 105px);
+    letter-spacing: -3px;
+  }
+
+  .webdev-purpose-right {
+    max-width: 400px;
+    padding-bottom: 80px;
+  }
+
+  .webdev-purpose-right p {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .webdev-purpose-glow {
+    width: 760px;
+    height: 320px;
+  }
+
+}
+
+
+/* ==========================
+   TABLET (992px)
+========================== */
+@media (max-width:992px) {
+
+  .webdev-purpose-section {
+    min-height: auto;
+    padding: 80px 28px;
+  }
+
+  .webdev-purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    min-height: auto;
+  }
+
+  .webdev-purpose-pill {
+    min-height: 38px;
+    font-size: 14px;
+  }
+
+  .webdev-purpose-title {
+    font-size: 60px;
+    letter-spacing: -2px;
+  }
+
+  .webdev-purpose-right {
+    max-width: 100%;
+    justify-self: start;
+    align-self: start;
+    padding-bottom: 0;
+  }
+
+  .webdev-purpose-right p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .webdev-purpose-glow {
+    width: 550px;
+    height: 240px;
+    left: -10%;
+    bottom: -10%;
+  }
+
+}
+
+
+/* ==========================
+   MOBILE (768px)
+========================== */
+@media (max-width:768px) {
+
+  .webdev-purpose-section {
+    padding: 70px 20px;
+  }
+
+  .webdev-purpose-pill {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 13px;
+    margin-bottom: 22px;
+  }
+
+  .webdev-purpose-grid {
+    gap: 35px;
+  }
+
+  .webdev-purpose-title {
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .webdev-purpose-right {
+    max-width: 100%;
+  }
+
+  .webdev-purpose-right p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .webdev-purpose-glow {
+    width: 360px;
+    height: 160px;
+    filter: blur(50px);
+  }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE (576px)
+========================== */
+@media (max-width:576px) {
+
+  .webdev-purpose-section {
+    padding: 60px 16px;
+  }
+
+  .webdev-purpose-pill {
+    min-height: 34px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .webdev-purpose-title {
+    font-size: 36px;
+  }
+
+  .webdev-purpose-right p {
+    font-size: 15px;
+  }
+
+  .webdev-purpose-glow {
+    width: 260px;
+    height: 120px;
+  }
+
+}
+
+
+/* ==========================
+   EXTRA SMALL (400px)
+========================== */
+@media (max-width:400px) {
+
+  .webdev-purpose-section {
+    padding: 50px 14px;
+  }
+
+  .webdev-purpose-pill {
+    min-height: 32px;
+    font-size: 11px;
+  }
+
+  .webdev-purpose-title {
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+
+  .webdev-purpose-right p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .webdev-purpose-glow {
+    width: 200px;
+    height: 90px;
+    filter: blur(35px);
+  }
+
 }
 
 /* =========================================
@@ -651,38 +996,66 @@ a {
 
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* ==========================================================
+   WEB PROCESS SECTION - RESPONSIVE
+   (Paste below your existing CSS)
+========================================================== */
 
+/* ==========================
+   LAPTOP (1200px)
+========================== */
 @media (max-width:1200px) {
 
-  .webdev-purpose-section {
-    padding: 38px 24px 46px;
+  .web-process-section {
+    padding: 40px 36px 80px;
   }
 
-  .webdev-purpose-grid {
-    grid-template-columns: 1fr;
-
-    min-height: auto;
-
-    gap: 54px;
+  .web-process-top {
+    gap: 30px;
+    margin-bottom: 50px;
   }
 
-  .webdev-purpose-right {
-    justify-self: start;
+  .web-process-title {
+    font-size: clamp(50px, 6vw, 90px);
+    letter-spacing: -3px;
+  }
 
-    max-width: 700px;
-
-    padding-bottom: 0;
+  .web-process-right p {
+    font-size: 18px;
+    line-height: 1.4;
   }
 
   .web-process-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .web-process-card {
+    min-height: 420px;
+    padding: 30px 24px;
+  }
+
+  .web-process-glow {
+    width: 700px;
+    height: 320px;
+  }
+
+}
+
+
+/* ==========================
+   TABLET (992px)
+========================== */
+@media (max-width:992px) {
+
+  .web-process-section {
+    padding: 70px 28px;
   }
 
   .web-process-top {
     grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
   }
 
   .web-process-right {
@@ -690,123 +1063,236 @@ a {
     padding-top: 0;
   }
 
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width:768px) {
-
-  .webdev-hero-section {
-    min-height: 280px;
-
-    padding: 34px 16px 24px;
-  }
-
-  .webdev-hero-kicker {
-    font-size: 14px;
-
-    margin-bottom: 12px;
-  }
-
-  .webdev-hero-title {
-    font-size: clamp(50px, 13vw, 60px);
-
-    letter-spacing: -2px;
-  }
-
-  .webdev-hero-text {
-    margin-top: 18px;
-
-    font-size: 16px;
-
-    line-height: 1.2;
-  }
-
-  .webdev-purpose-section {
-    min-height: auto;
-
-    padding: 28px 16px 34px;
-  }
-
-  .webdev-purpose-pill {
-    min-height: 36px;
-
-    padding: 0 12px;
-
-    font-size: 14px;
-
-    margin-bottom: 18px;
-  }
-
-  .webdev-purpose-title {
-    font-size: clamp(44px, 11vw, 74px);
-
-    line-height: .98;
-
-    letter-spacing: -2px;
-  }
-
-  .webdev-purpose-right p {
-    font-size: 18px;
-
-    line-height: 1.18;
-  }
-
-  .webdev-purpose-glow {
-    width: 520px;
-    height: 240px;
-
-    left: -8%;
-    bottom: -4%;
-
-    filter: blur(42px);
-  }
-
-  .web-process-section {
-    padding: 28px 16px 50px;
+  .web-process-right p {
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.5;
   }
 
   .web-process-title {
-    font-size: clamp(42px, 11vw, 74px);
-
+    font-size: 60px;
     letter-spacing: -2px;
   }
 
+  .web-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .web-process-card {
+    min-height: 390px;
+    border-radius: 28px;
+    padding: 28px 22px;
+  }
+
+  .web-process-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  .web-process-step {
+    margin-bottom: 28px;
+  }
+
+  .web-process-card h3 {
+    font-size: 24px;
+  }
+
+  .web-process-card p {
+    font-size: 16px;
+  }
+
+  .web-process-glow {
+    width: 520px;
+    height: 220px;
+    right: -140px;
+    bottom: -100px;
+  }
+
+}
+
+
+/* ==========================
+   MOBILE (768px)
+========================== */
+@media (max-width:768px) {
+
+  .web-process-section {
+    padding: 60px 20px;
+  }
+
+  .web-process-pill {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .web-process-title {
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
   .web-process-right p {
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .web-process-grid {
     grid-template-columns: 1fr;
-
     gap: 18px;
   }
 
   .web-process-card {
     min-height: auto;
-
-    border-radius: 26px;
-
-    padding: 26px 22px;
+    padding: 24px;
+    border-radius: 22px;
+    animation: none;
   }
 
   .web-process-icon {
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 
-    font-size: 22px;
+  .web-process-icon::before {
+    inset: -8px;
+  }
 
-    margin-bottom: 26px;
+  .web-process-step {
+    margin-bottom: 18px;
+    font-size: 12px;
   }
 
   .web-process-card h3 {
-    font-size: 28px;
+    font-size: 22px;
+    margin-bottom: 10px;
   }
 
   .web-process-card p {
     font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .web-process-glow {
+    width: 360px;
+    height: 160px;
+    right: -120px;
+    bottom: -80px;
+    filter: blur(50px);
+  }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE (576px)
+========================== */
+@media (max-width:576px) {
+
+  .web-process-section {
+    padding: 50px 16px;
+  }
+
+  .web-process-pill {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .web-process-title {
+    font-size: 36px;
+  }
+
+  .web-process-right p {
+    font-size: 15px;
+  }
+
+  .web-process-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .web-process-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .web-process-card h3 {
+    font-size: 20px;
+  }
+
+  .web-process-card p {
+    font-size: 14px;
+  }
+
+  .web-process-glow {
+    width: 260px;
+    height: 120px;
+  }
+
+}
+
+
+/* ==========================
+   EXTRA SMALL (400px)
+========================== */
+@media (max-width:400px) {
+
+  .web-process-section {
+    padding: 45px 14px;
+  }
+
+  .web-process-pill {
+    min-height: 32px;
+    font-size: 11px;
+  }
+
+  .web-process-title {
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+
+  .web-process-right p {
+    font-size: 14px;
+  }
+
+  .web-process-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .web-process-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .web-process-step {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .web-process-card h3 {
+    font-size: 18px;
+  }
+
+  .web-process-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .web-process-glow {
+    width: 200px;
+    height: 90px;
+    filter: blur(35px);
   }
 
 }

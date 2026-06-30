@@ -346,18 +346,18 @@ a {
 
   .About-hero-section {
     min-height: auto;
-    padding: 150px 18px 40px;
+    padding: 150px 18px 100px;
   }
 
   .About-hero-circle {
     width: 470px;
-    height: 470px;
+    height: 500px;
     top: 12%;
   }
 
   .About-hero-glow {
     width: 280px;
-    height: 280px;
+    height: 300px;
     filter: blur(45px);
   }
 
@@ -366,9 +366,10 @@ a {
   }
 
   .About-hero-title {
-    font-size: 34px;
+    font-size: 40px;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     letter-spacing: -1px;
   }
 
@@ -377,7 +378,7 @@ a {
   }
 
   .About-hero-text {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.7;
     max-width: 100%;
   }
@@ -537,24 +538,24 @@ vedio section
 }
 
 /* ==========================================================
-   LARGE LAPTOPS (1440px)
+   RESPONSIVE - VIDEO SECTION
 ========================================================== */
-@media (max-width: 1440px) {
+
+/* Large Laptop (1440px and below) */
+@media (max-width:1440px) {
 
   .about-showreel-card {
-    max-width: 1200px;
-    height: 450px;
+    max-width: 95%;
+    height: 480px;
   }
 
 }
 
-/* ==========================================================
-   LAPTOP (1200px)
-========================================================== */
-@media (max-width: 1200px) {
+/* Laptop */
+@media (max-width:1200px) {
 
   .about-showreel-card {
-    height: 420px;
+    height: 430px;
   }
 
   .about-top-info {
@@ -571,70 +572,30 @@ vedio section
 
 }
 
-/* ==========================================================
-   TABLET LANDSCAPE (1024px)
-========================================================== */
-@media (max-width: 1024px) {
+
+/* Tablet */
+@media (max-width:992px) {
 
   .about-showreel-card {
     height: 380px;
-    border-radius: 16px;
+    border-radius: 10px;
   }
 
   .about-top-info {
-    padding: 0 24px;
+    padding: 0 25px;
     top: 20px;
   }
 
   .about-brand-logo {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .about-charging-info .label {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .about-charging-info .value {
     font-size: 20px;
-  }
-
-  .about-play-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .about-action-text {
-    font-size: 18px;
-  }
-
-}
-
-/* ==========================================================
-   TABLET PORTRAIT (768px)
-========================================================== */
-@media (max-width: 768px) {
-
-  .about-showreel-card {
-    height: auto;
-    aspect-ratio: 16/9;
-    border-radius: 14px;
-  }
-
-  .about-top-info {
-    padding: 0 18px;
-    top: 18px;
-  }
-
-  .about-brand-logo {
-    font-size: 14px;
-  }
-
-  .about-charging-info .label {
-    font-size: 11px;
-  }
-
-  .about-charging-info .value {
-    font-size: 18px;
   }
 
   .about-play-action-center {
@@ -642,8 +603,53 @@ vedio section
   }
 
   .about-play-icon {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .about-divider {
+    font-size: 18px;
+  }
+
+  .about-action-text {
+    font-size: 18px;
+  }
+
+}
+
+
+/* Large Mobile */
+@media (max-width:768px) {
+
+  .about-showreel-card {
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .about-top-info {
+    padding: 0 20px;
+    top: 18px;
+  }
+
+  .about-brand-logo {
+    font-size: 16px;
+  }
+
+  .about-charging-info .label {
+    font-size: 12px;
+  }
+
+  .about-charging-info .value {
+    font-size: 18px;
+  }
+
+  .about-play-action-center {
+    gap: 10px;
+  }
+
+  .about-play-icon {
+    width: 30px;
+    height: 30px;
   }
 
   .about-divider {
@@ -652,36 +658,39 @@ vedio section
 
   .about-action-text {
     font-size: 16px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
 
 }
 
-/* ==========================================================
-   MOBILE (480px)
-========================================================== */
-@media (max-width: 480px) {
+
+/* Mobile */
+@media (max-width:576px) {
 
   .about-showreel-card {
-    border-radius: 12px;
+    width: 95%;
+    height: 240px;
+    border-radius: 8px;
+    margin-top: 80px;
+    /* Gap between Hero & Video */
+
   }
 
   .about-top-info {
-    top: 14px;
-    padding: 0 14px;
+    padding: 0 16px;
+    top: 15px;
   }
 
   .about-brand-logo {
-    font-size: 12px;
-    letter-spacing: .5px;
+    font-size: 15px;
   }
 
   .about-charging-info .label {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .about-charging-info .value {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .about-play-action-center {
@@ -689,53 +698,60 @@ vedio section
   }
 
   .about-play-icon {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
   }
 
   .about-divider {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .about-action-text {
-    font-size: 12px;
-    text-align: center;
+    font-size: 14px;
   }
 
 }
 
-/* ==========================================================
-   SMALL MOBILE (360px)
-========================================================== */
-@media (max-width: 360px) {
+
+/* Small Mobile */
+@media (max-width:400px) {
+
+  .about-showreel-card {
+    height: 210px;
+  }
 
   .about-top-info {
-    padding: 0 10px;
+    padding: 0 12px;
+    top: 12px;
   }
 
   .about-brand-logo {
-    font-size: 11px;
-  }
-
-  .about-charging-info .label {
-    font-size: 9px;
-  }
-
-  .about-charging-info .value {
     font-size: 13px;
   }
 
+  .about-charging-info .label {
+    font-size: 10px;
+  }
+
+  .about-charging-info .value {
+    font-size: 14px;
+  }
+
+  .about-play-action-center {
+    gap: 6px;
+  }
+
   .about-play-icon {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
   .about-divider {
-    display: none;
+    font-size: 12px;
   }
 
   .about-action-text {
-    font-size: 11px;
+    font-size: 12px;
   }
 
 }
@@ -1673,7 +1689,7 @@ about us section
   }
 
   .about-heading {
-    font-size: 36px;
+    font-size: px;
   }
 
   .qs-values-heading {

@@ -284,112 +284,317 @@ a {
   box-shadow: 0 0 16px rgba(20, 99, 123, .4);
 }
 
-/* =====================================
-   TABLET
-===================================== */
+/* ==========================================================
+   MOBILE APP PAGE RESPONSIVE
+   (Paste below your existing CSS)
+========================================================== */
 
+/* ==========================
+   LAPTOP (1200px)
+========================== */
 @media (max-width:1200px) {
 
+  .app-hero-section {
+    padding: 30px 32px 20px;
+    min-height: 280px;
+  }
+
+  .app-hero-title {
+    font-size: clamp(64px, 8vw, 110px);
+    letter-spacing: -4px;
+  }
+
+  .app-hero-text {
+    max-width: 850px;
+    font-size: 20px;
+  }
+
   .app-purpose-section {
-    padding: 42px 24px 46px;
+    padding: 90px 36px 50px;
   }
 
   .app-purpose-grid {
-    grid-template-columns: 1fr;
-
-    min-height: auto;
-
-    gap: 54px;
-  }
-
-  .app-purpose-right {
-    justify-self: start;
-
-    max-width: 720px;
-
-    padding-bottom: 0;
+    gap: 30px;
   }
 
   .app-purpose-title {
-    letter-spacing: -2px;
+    font-size: clamp(60px, 6vw, 100px);
+    letter-spacing: -3px;
+  }
+
+  .app-purpose-right {
+    max-width: 420px;
+    padding-bottom: 80px;
+  }
+
+  .app-purpose-right p {
+    font-size: 20px;
+  }
+
+  .app-purpose-glow {
+    width: 760px;
+    height: 320px;
   }
 
 }
 
-/* =====================================
-   MOBILE
-===================================== */
 
-@media (max-width:768px) {
+/* ==========================
+   TABLET (992px)
+========================== */
+@media (max-width:992px) {
 
   .app-hero-section {
-    min-height: 280px;
-
-    padding: 34px 16px 24px;
+    padding: 28px 28px 20px;
+    min-height: auto;
   }
 
   .app-hero-kicker {
-    font-size: 14px;
-
-    margin-bottom: 12px;
+    font-size: 16px;
   }
 
   .app-hero-title {
-    font-size: clamp(50px, 13vw, 60px);
-
-    letter-spacing: -2px;
+    font-size: 60px;
+    letter-spacing: -3px;
   }
 
   .app-hero-text {
-    margin-top: 18px;
-
-    font-size: 16px;
-
-    line-height: 1.2;
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.4;
   }
 
   .app-purpose-section {
     min-height: auto;
-
-    padding: 30px 16px 40px;
+    padding: 80px 28px;
   }
 
-  .app-purpose-pill {
-    min-height: 36px;
-
-    padding: 0 12px;
-
-    font-size: 14px;
-
-    margin-bottom: 18px;
+  .app-purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    min-height: auto;
   }
 
   .app-purpose-title {
-    font-size: clamp(42px, 11vw, 72px);
-
-    line-height: .98;
-
+    font-size: 60px;
     letter-spacing: -2px;
+  }
+
+  .app-purpose-right {
+    max-width: 100%;
+    justify-self: start;
+    align-self: start;
+    padding-bottom: 0;
   }
 
   .app-purpose-right p {
     font-size: 18px;
-
-    line-height: 1.18;
+    line-height: 1.5;
   }
 
   .app-feature {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .app-purpose-glow {
-    width: 520px;
+    width: 550px;
     height: 240px;
+    right: -20%;
+    bottom: -10%;
+  }
 
-    right: -16%;
-    bottom: -4%;
+}
 
-    filter: blur(42px);
+
+/* ==========================
+   MOBILE (768px)
+========================== */
+@media (max-width:768px) {
+
+  .app-hero-section {
+    margin-top: 40px;
+    padding: 24px 20px;
+  }
+
+  .app-hero-kicker {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .app-hero-title {
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .app-hero-text {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .app-purpose-section {
+    padding: 70px 20px;
+  }
+
+  .app-purpose-pill {
+    min-height: 36px;
+    padding: 0 14px;
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .app-purpose-grid {
+    gap: 35px;
+  }
+
+  .app-purpose-title {
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .app-purpose-right {
+    max-width: 100%;
+  }
+
+  .app-purpose-right p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .app-purpose-features {
+    gap: 14px;
+  }
+
+  .app-feature {
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .app-feature-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .app-purpose-glow {
+    width: 360px;
+    height: 160px;
+    filter: blur(50px);
+  }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE (576px)
+========================== */
+@media (max-width:576px) {
+
+  .app-hero-section {
+    margin-top: 30px;
+    padding: 20px 16px;
+  }
+
+  .app-hero-kicker {
+    font-size: 14px;
+  }
+
+  .app-hero-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .app-hero-text {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+
+  .app-purpose-section {
+    padding: 60px 16px;
+  }
+
+  .app-purpose-pill {
+    font-size: 12px;
+    min-height: 34px;
+  }
+
+  .app-purpose-title {
+    font-size: 36px;
+  }
+
+  .app-purpose-right p {
+    font-size: 15px;
+  }
+
+  .app-feature {
+    font-size: 14px;
+  }
+
+  .app-purpose-glow {
+    width: 260px;
+    height: 120px;
+  }
+
+}
+
+
+/* ==========================
+   EXTRA SMALL (400px)
+========================== */
+@media (max-width:400px) {
+
+  .app-hero-section {
+    padding: 50px 14px 25px;
+    margin-top: 50px;
+  }
+
+  .app-hero-kicker {
+    font-size: 13px;
+  }
+
+  .app-hero-title {
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+
+  .app-hero-text {
+    font-size: 14px;
+  }
+
+  .app-purpose-section {
+    padding: 50px 14px;
+  }
+
+  .app-purpose-pill {
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+
+  .app-purpose-title {
+    font-size: 30px;
+  }
+
+  .app-purpose-right p {
+    font-size: 14px;
+  }
+
+  .app-feature {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .app-feature-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .app-purpose-glow {
+    width: 200px;
+    height: 90px;
+    filter: blur(35px);
   }
 
 }
